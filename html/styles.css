@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');@import url('https://fonts.cdnfonts.com/css/pricedown');@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300;400;500;700;900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yantramanav:wght@100;300;400;500;700;900&display=swap');
+
+@font-face {
+  font-family: 'sus';
+  src: url('./Font/sus.otf') format('opentype'); /* Correct format for OpenType */
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Menu */
+div#openmenu { display: none; position: absolute; width: 50%; top: 45%; left: 50%; transform: translate(-50%,-50%); }
+.brand-logo { width: 25%; } /* when using an svg all you need to change is the width and it will resize it */
+
+/* Menu tab & panel styles */
+.text-tabcolor { color: rgb(255, 255, 255)!important; }
+.bg-active-tab { background: rgb(23 23 23)!important; }
+.bg-panel { background: rgb(30 30 30)!important; }
+.q-tab-panels { border-top-right-radius: 12px!important; border-bottom-right-radius: 12px!important; } /* change all 12px for a different border radius (rounds edges of the menu) */
+.q-splitter__panel.q-splitter__before { border-top-left-radius: 12px!important; border-bottom-left-radius: 12px!important; } /* change all 12px for a different border radius (rounds edges of the menu) */
+.q-tabs--vertical.q-tabs--not-scrollable .q-tabs__content { border-top-left-radius: 12px!important; border-bottom-left-radius: 12px!important; } /* change all 12px for a different border radius (rounds edges of the menu) */
+
+/* Menu text styles */
+.text-h6 { color: rgb(255, 255, 255)!important; }
+.text-h7 { color: rgba(255, 255, 255, 0.8)!important; }
+
+/* Menu buttons & checkboxes & toggle switch icons styles */
+.text-textbutton { color: rgb(0, 0, 0)!important; }
+.bg-bgbutton { background: rgba(241, 229, 66, 0.651)!important; }
+.q-checkbox__inner { color: rgb(255 255 255 / 70%)!important; }
+.text-checkbox { color: rgba(241, 229, 66, 0.651)!important; }
+.q-checkbox__svg { color: rgb(0, 0, 0)!important; }
+.q-checkbox__inner--truthy .q-checkbox__bg { box-shadow: 0px 0px 3px 3px rgb(220 20 60 / 15%)!important; } /* if you want the checkboxes to have a glow/shadow */
+.text-toggleicons { color: rgb(0, 0, 0)!important; }
+
+/* Menu misc */
+hr { opacity: 0.1!important; } /* horizontal line that seperates sections */
+.q-mb-md { margin-bottom: 0px!important; } /* removes extra top padding */
+.q-mb-md-d { padding-left: 10px!important; padding-bottom: 10px!important;} /* keeps q-items aligned */
+.q-item { padding: 8px 0px!important; } /* keeps q-items aligned */
+.q-item__section--avatar { min-width: 40px!important } /* keeps q-items aligned */
+.q-item__section--side { padding-right: 0px!important; } /* keeps q-items aligned */
+.q-splitter--vertical>.q-splitter__separator { width: 0px!important; } /* keeps navigation tab panel seamless */
+div#q-loading-bar { display: none!important; } /* makes sure there's no ajax load from quasar */
+::-webkit-scrollbar { display: none!important; } /* makes sure there's no ugly scrollbar on menu*/
+
+/* Hud radial styles */
+.text-health { color: rgb(33, 171, 97)!important; }
+.text-stress { color: rgb(255, 0, 0)!important; }
+.text-nos { color: rgb(255, 72, 133)!important; }
+.text-cruise { color: rgb(255, 72, 133)!important; }
+.text-armed { color: rgb(255, 72, 133)!important; }
+.text-harness { color: rgb(182, 72, 255)!important; }
+.text-oxygen { color: rgb(138, 168, 189)!important; }
+.text-parachute { color: rgb(0, 0, 0)!important; }
+.text-dev { color: rgb(0, 0, 0)!important; }
+.text-gauge { color: rgb(255, 255, 255)!important; }
+
+#main-container {
+  width: 100%;
+  height: auto;
+}
+
+/* Money */
+#money-container {
+  position: absolute;
+  right: 2vw;
+  top: 5vh;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+#sign, #bank {
+  font-family: 'Pricedown Bl', sans-serif;
+  text-align: right;
+  color: #00ac31;
+  text-shadow: -1px -1px 0 rgba(0,0,0, 0.7), 1px -1px 0 rgba(0,0,0, 0.7), -1px 1px 0 rgba(0,0,0, 0.7), 1px 1px 0 rgba(0,0,0, 0.7);
+}
+
+#plus {
+  font-size: 50px;
+  font-family: 'Pricedown Bl', sans-serif;
+  text-align: right;
+  color: #00ac31;
+  text-shadow: -1px -1px 0 rgba(0,0,0, 0.7), 1px -1px 0 rgba(0,0,0, 0.7), -1px 1px 0 rgba(0,0,0, 0.7), 1px 1px 0 rgba(0,0,0, 0.7);
+}
+
+#minus {
+  font-size: 50px;
+  font-family: 'Pricedown Bl', sans-serif;
+  text-align: right;
+  color: #ac0000;
+  text-shadow: -1px -1px 0 rgba(0,0,0, 0.7), 1px -1px 0 rgba(0,0,0, 0.7), -1px 1px 0 rgba(0,0,0, 0.7), 1px 1px 0 rgba(0,0,0, 0.7);
+}
+
+#money {
+  font-family: 'Pricedown Bl', sans-serif;
+  text-align: right;
+  color: #ffffff;
+  text-shadow: -1px -1px 0 rgba(0,0,0, 0.7), 1px -1px 0 rgba(0,0,0, 0.7), -1px 1px 0 rgba(0,0,0, 0.7), 1px 1px 0 rgba(0,0,0, 0.7);
+}
+
+/* Player HUD */
+
+#playerhud {
+  position: absolute;
+  display: flex;
+  left: 3vh;
+  bottom: 0.2vw;
+}
+
+.q-ml-xl {
+  margin-left: -22px!important; /* Change this to space radials */
+}
+
+/* Vehicle HUD */
+
+speed:after {
+  content: "KPH"; /* If using KPH change this content from MPH */
+  display: block;
+  padding-top: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 8px;
+  font-weight: 900;
+}
+
+altitude:after {
+  content: "ALT";
+  display: block;
+  padding-top: 10px;
+  padding-left: 2px;
+  padding-right: 2px;
+  font-weight: 900;
+}
+
+.speed {
+  font-size: 8vh;
+  color: #ffffff80; 
+  text-align: center;
+  font-family: 'sus', sans-serif;
+  text-shadow: 0px 0px 120px white;
+}
+
+.speeddail {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 80px !important;
+  z-index: 9999 !important;
+  text-align: center;
+  font-size: 2.4vh;
+}
+
+.fuel-container {
+  transform: rotate(-74.45deg);
+  position: fixed;
+  bottom: 80px;
+  right: 10px;
+  width: 100px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.fuel-bar {
+  height: 100%;
+  background-color: green;
+  border-radius: 4px; 
+  box-shadow: 0px 0px 10px green;
+}
+
+.fuel-text {
+  transform: rotate(80deg);
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+}
+
+
+
+altitude {
+  transform: rotate(135deg);
+  font-size: 2.4vh;
+  position: fixed; 
+  color: #fff; 
+  text-align: center;
+  font-weight: 600;
+}
+
+.border {
+  bottom: 7.9%;
+  left: 1.3%;
+  width: 0%;
+  text-align: center;
+}
+
+.square {
+  bottom: 6.30%;
+  width: 29vh;
+  height: 18.5vh;
+  border: 4px solid #bababa;
+  position: absolute;
+  display: inline-block;
+}
+
+.circle {
+  bottom: 6.9%;
+  width: 27vh;
+  height: 22.9vh;
+  border: 4px solid #bababa;
+  position: absolute;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+/* Animation */
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Compass */
+.baseplate {
+  position: relative;
+  margin: 0 auto;
+  top: -0.8vh;
+	width: 150px;
+  height: auto;
+}
+
+.street-container,.degree-container {
+  position: absolute; /* Positioning relative to the viewport */
+  background: rgba(49, 49, 49, 0.58); /* Semi-transparent dark background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px 20px; /* Padding inside the box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for a raised look */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional border for definition */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Ensure elements are spaced between */
+  align-items: center; /* Center content vertically */
+  height: 40px; /* Set a fixed height */
+  box-shadow: 0px 0px 150px white; /* Glow effect */
+  z-index: -10000000px;
+}
+
+/* Specific styles for street-container1 */
+.street-container1 {
+  bottom: 160px; /* Adjusted distance from the bottom edge */
+  left: 340px; /* Adjusted left position */
+  width: auto; /* Define a specific width for the container */
+}
+
+/* Specific styles for street-container2 */
+.street-container2 {
+  bottom: 120px; /* Adjusted distance from the bottom edge */
+  left: 340px; /* Adjusted left position */
+  width: auto; /* Define a specific width for the container */
+}
+
+.street-icon {
+  width: 10px;
+  padding-left: 30px;
+}
+
+
+.street {
+  color: rgb(255, 255, 255); /* White color */
+  text-align: right; /* Align text to the right */
+  font-size: 1.4vh;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+}
+
+.degree-container{
+  padding: 8px;
+  bottom: 210px; /* Adjusted distance from the bottom edge */
+  left: 290px; /* Adjusted left position */
+  width: 43px; /* Define a specific width for the container */
+  height: 43px;
+  background: linear-gradient(180deg, rgba(0,131,25,0.396796218487395) 20%, rgba(40,176,0,0.396796218487395) 59%);
+}
+
+.degrees {
+  font-family: 'Yantramanav', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 600;
+  text-shadow: 0 0 1px rgb(0 0 0 / 60%), 0 0 1px rgb(0 0 0 / 60%), 0 0 1px rgb(0 0 0 / 60%), 0 0 1px rgb(0 0 0 / 60%);
+}
+
+.pointer {
+  position: absolute;
+  margin: 0 auto;
+  top: -2%;
+  left: 0;
+  right: 0;
+  font-family: 'Yantramanav', sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 2.2vh;
+  text-align: center;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+}
+
+
+
+.bezel {
+  position: relative;
+  width:100%;
+  height: 2vh;
+  font-family: 'Yantramanav', sans-serif;
+  font-size: 0.35vh;
+  font-weight: 700;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6);
+}
+
+.bearing {
+  position: relative;
+  width:100%;
+  top: -0.5vh;
+  height: 3.5vh;
+  padding-left: 0.12vw;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.3vh;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: none;
+  font-weight: 600;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6);
+}
