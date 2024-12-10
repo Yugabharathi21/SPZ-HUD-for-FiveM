@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # SPZ-HUD-for-FiveM
 This repository is a fork of the Qbox HUD (Qbx_HUD) project, featuring a fully redesigned frontend for a next-generation user interface. The HUD has been reimagined with a focus on enhancing both aesthetics and functionality, ensuring a more immersive and modern experience for users.
 
