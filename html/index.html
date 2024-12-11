@@ -13,14 +13,16 @@
     </head>
     <body>
         <div id="baseplate-container" v-show="show">
-            <div v-if="showStreets" class="street-container street-container2">
-                <div class="street">{{street2}}</div>
+            <div v-if="showStreets" class="street-container">
+                <div class="street">
+                    {{ street1 }}
+                    <br>
+                    <span v-if="street2"> & {{ street2 }}</span>
+                  </div>
+                  <div class="street-icon-contianer">
                 <q-icon name="fas fa-location" class="street-icon"size="19.5px" color="white"/>
             </div>
-            <div id="baseplate-container" v-show="show">
-                <div v-if="showStreets" class="street-container street-container1">
-                    <div class="street">{{street1}}</div>
-                </div>
+            </div>
             </div>
                 <div class="degree-container">
                 <div v-if="showDegrees" class="degrees"></div>
