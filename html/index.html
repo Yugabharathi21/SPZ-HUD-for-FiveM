@@ -244,11 +244,13 @@
                         </div>
                         </transition>
                         <transition name="fade">
-                        <div v-if="showEngine">
-                            <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: engineColor}" :min="0" :max="100"></q-circular-progress>
-                            <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="engine" size="50px" :thickness="0.24" :style="{color: engineColor}" :min="0" :max="100" center-color="grey-10">
-                            <q-icon style="top: -1px;" name="fas fa-oil-can" size="19.5px":style="{color: engineColor}"/>
-                        </div>
+                            <div v-if="showEngine" class="engine-container">
+
+                                <div class="engine-bar" :style="{ width: engine + '%', backgroundColor: engineColor , boxShadow: '0px 0px 10px ' + engineColor}"></div>
+                                <div class="engine-text" :style="{transform: 'rotate(0deg)' }">{{ engine }}%</div>
+                                <q-icon class="engine-icon" name="fas fa-oil-can"></q-icon>
+
+                              </div>                                                           
                         </transition>
                         <transition name="fade">
                         <div v-if="showHarness">

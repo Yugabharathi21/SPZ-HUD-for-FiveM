@@ -179,6 +179,40 @@ altitude:after {
   top: 20px;
 }
 
+.engine-container {
+  position: fixed; /* Fixed position */
+  bottom: 140px;
+  right: 50px;
+  transform: rotate(0deg); /* Adjust rotation angle */
+  width: 100px;
+  height: 10px;
+  background-color: #333;
+  box-shadow: 0px 0px 150px rgb(255, 255, 255);
+}
+
+.engine-bar {
+  height: 100%;
+  border-radius: 4px;
+
+}
+
+.engine-text {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: -20px;
+}
+
+.engine-icon {
+  size: 5px;
+  margin-top: 5px;
+  color: #fff;
+  top: -32px;
+  right: -40px;
+}
+
+
 
 
 altitude {

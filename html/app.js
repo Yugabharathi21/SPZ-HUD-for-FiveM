@@ -676,6 +676,7 @@ const playerHud = {
       dynamicNitro: 0,
       nos: 0,
       static: 100,
+
       health: 0,
       playerDead: 0,
       armor: 0,
@@ -714,7 +715,7 @@ const playerHud = {
       voiceIcon: "fas fa-microphone",
       talkingColor: "#FFFFFF",
       nosColor: "",
-      engineColor: "",
+      engineColor: "#3FA554",
       armorColor: "",
       hungerColor: "",
       healthColor: "",
@@ -730,9 +731,6 @@ const playerHud = {
       if (event.data.action === "hudtick") {
         this.hudTick(event.data);
       } 
-      // else if(event.data.update) {
-      //   eval(event.data.action + "(" + event.data.show + ')')
-      // }
     });
     Config = {};
   },
@@ -756,7 +754,7 @@ const playerHud = {
       this.armed = data.armed;
       this.parachute = data.parachute;
       this.hp = data.hp*5;
-      this.engine = data.engine;
+      this.engine = Math.round(data.engine);
       this.cinematic = data.cinematic;
       this.dev = data.dev;
       this.playerDead = data.playerDead;
@@ -865,11 +863,11 @@ const playerHud = {
           this.showEngine = false;} else {this.showEngine = true;}
       } 
       if (data.engine <= 45) {
-        this.engineColor = "#ff0000";
+        this.engineColor = "red";
       } else if (data.engine <= 75 && data.engine >= 46 ) {
-        this.engineColor = "#dd6e14";
+        this.engineColor = "yellow";
       } else if(data.engine<=100) {
-        this.engineColor = "#3FA554";
+        this.engineColor = "green";
       } 
 
       if (data.dynamicNitro == true) {
@@ -935,8 +933,41 @@ const playerHud = {
         this.show = false;
       }
     },
+    updateEngineHealth(newHealth) {
+      this.engine = Math.round(newHealth); // Round to nearest whole number
+
+      // Dynamic color updates
+      if (newHealth <= 45) {
+        this.engineColor = 'red';
+      } else if (newHealth <= 75 && newHealth >= 46) {
+        this.engineColor = 'yellow';
+      } else {
+        this.engineColor = 'green';
+      }
+
+      // Show or hide engine health bar based on dynamic conditions
+      if (this.dynamicEngine) {
+        if (newHealth >= 95 || newHealth < 0) {
+          this.showEngine = false;
+        } else {
+          this.showEngine = true;
+        }
+      } else {
+        if (newHealth < 0) {
+          this.showEngine = false;
+        } else {
+          this.showEngine = true;
+        }
+      }
+    },
+  },
+  watch: {
+    engine(newValue) {
+      this.updateEngineHealth(newValue); // Automatically update when engine health changes
+    },
   },
 };
+
 const app2 = Vue.createApp(playerHud);
 app2.use(Quasar);
 app2.mount("#ui-container");
@@ -1101,7 +1132,7 @@ const baseplateHud = {
         this.showDegrees = false;
       }
     },
-  },
+  },  
 };
 const app4 = Vue.createApp(baseplateHud);
 app4.use(Quasar);
