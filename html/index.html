@@ -170,7 +170,7 @@
                     </div>
                     <div id="money-bank">
                         <transition name="slide-fade">
-                            <p v-if="showBank"><span id="sign">$&nbsp;</span><span id="bank">{{(bank)}}</span></p>
+                            <p v-if="showBank"><span id="sign">$&nbsp;<*/span><span id="bank">{{(bank)}}</span></p>
                         </transition>
                     </div>
                     <div id="money-change" v-if="showUpdate">
@@ -181,10 +181,8 @@
                 <div id="ui-container">
                     <div id="playerHud" v-show="show">
                         <transition name="fade">
-                        <div v-if="showVoice">
-                            <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: talkingColor}" :min="0" :max="100"></q-circular-progress>
-                            <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="voice" size="50px" :thickness="0.24" :style="{color: talkingColor}" :min="0" :max="5" center-color="grey-10">
-                            <q-icon style="top: -0.5px; left: 0px;" :name="voiceIcon" size="19.5px" color="white"/>
+                        <div v-if="showVoice" class="voice-container">
+                            <q-icon :name="voiceIcon" size="19.5px" class="voice" :style="{color: talkingColor}"/>
                         </div>
                         </transition>
                         <transition name="fade">
@@ -306,9 +304,6 @@
                         </transition>
                         <div class="border">
                             <div class="square" v-if="showSquare"></div>
-                        </div>
-                        <div class="border">
-                            <div class="circle" v-if="showCircle"></div>
                         </div>
                     </div>
                 </div>
