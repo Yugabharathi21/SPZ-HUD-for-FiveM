@@ -1064,10 +1064,6 @@ const baseplateHud = {
         value = event.data.value
           if (value  !== undefined) {
             $('.degrees').html(value);
-            bar = document.getElementsByTagName("svg")[0];
-            bar.setAttribute("viewBox", ''+ (value - 90) + ' 0 180 5');
-            heading = document.getElementsByTagName("svg")[1];
-            heading.setAttribute("viewBox", ''+ (value - 90) + ' 0 180 1.5');
           }
         }
       if (event.data.action === "baseplate") {
