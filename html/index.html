@@ -19,13 +19,14 @@
                     <br>
                     <span v-if="street2"> & {{ street2 }}</span>
                   </div>
+                  <div class="degree-container">
+                    <div v-if="showDegrees" class="degrees"></div>
+                </div>
                   <div class="street-icon-contianer">
                 <q-icon name="fas fa-location" class="street-icon"size="19.5px" color="white"/>
             </div>
+
             </div>
-            </div>
-                <div class="degree-container">
-                <div v-if="showDegrees" class="degrees"></div>
             </div>
             </div>
             <div id="openmenu">

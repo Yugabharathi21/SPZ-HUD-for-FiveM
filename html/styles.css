@@ -346,12 +346,13 @@ altitude {
 }
 
 .degree-container{
-  padding: 8px;
-  bottom: 210px; /* Adjusted distance from the bottom edge */
-  left: 290px; /* Adjusted left position */
-  width: 43px; /* Define a specific width for the container */
-  height: 43px;
+  position: relative;
   background: linear-gradient(180deg, rgba(0,131,25,0.396796218487395) 20%, rgba(40,176,0,0.396796218487395) 59%);
+  border-radius: 9px;
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  left: 5px;
 }
 
 .degrees {
@@ -360,6 +361,7 @@ altitude {
   font-size: 20px;
   font-weight: 600;
   text-shadow: 0 0 1px rgb(0 0 0 / 60%), 0 0 1px rgb(0 0 0 / 60%), 0 0 1px rgb(0 0 0 / 60%), 0 0 1px rgb(0 0 0 / 60%);
+  padding-left: -10px ;
 }
 
 .pointer {
