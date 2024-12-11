@@ -243,7 +243,19 @@ altitude:after {
   padding: 10px;
 }
 
+.seatbelt-icon{
+  size: 14px;
+  color: #fff;
+  padding: 10px;
+  background: linear-gradient(180deg, rgba(0,131,25,0.396796218487395) 20%, rgba(40,176,0,0.396796218487395) 59%);
+  border-radius: 8px;
+}
 
+.seatbelt-container{
+  bottom: 155px; 
+  right: 80px;
+  position: absolute;
+}
 
 
 altitude {
@@ -332,7 +344,7 @@ altitude {
 
 /* Specific styles for street-container2 */
 .street-container {
-  bottom: 67px; /* Adjusted distance from the bottom edge */
+  bottom: 50px; /* Adjusted distance from the bottom edge */
   left: 340px; /* Adjusted left position */
   width: auto; /* Define a specific width for the container */
 }

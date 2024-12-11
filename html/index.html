@@ -300,11 +300,9 @@
                             <altitude>{{(altitude)}}</altitude>
                         </div>  
                         <transition name="fade">
-                        <div class="responsive" id="seatbelt" v-if="showSeatbelt">
-                            <q-circular-progress class="q-ml-xl" style="transform: rotate(-125deg); opacity: 60%;" size="70px" :thickness="0.21" color="gauge" :min="0" :max="100"></q-circular-progress>
-                            <q-circular-progress class="q-ml-xl" style="transform: rotate(-125deg); left: -40%;" show-value size="70px" :thickness="0.21" color="gauge" :min="0" :max="750">
-                            <q-icon name="fas fa-user-slash" style="transform: rotate(125deg);" :value="seatbelt" size="21px" :style="{color: seatbeltColor}"/>
-                        </div>
+                            <div class="seatbelt-container">
+                                <q-icon name="fas fa-user-slash" class="seatbelt-icon" :value="seatbelt" :style="{color: seatbeltColor}"></q-icon>
+                            </div>                            
                         </transition>
                         <div class="border">
                             <div class="square" v-if="showSquare"></div>

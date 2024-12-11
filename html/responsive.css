@@ -13,10 +13,6 @@
     position: relative;
     left: 11vh!important;
   }
-  #seatbelt {
-    position: relative;
-    left: 8.5vh!important;
-  }
   altitude {
     font-size: 2vh!important;
   }
@@ -26,11 +22,6 @@
   .square {
     left: 2.5vh!important;
     bottom: 6%!important;
-  }
-  .circle {
-    left: 3.2vh!important;
-    width: 27.6vh!important;
-    bottom: 6.9%!important;
   }
 }
 
@@ -45,10 +36,6 @@
     position: relative;
     left: 8.2vh!important;
   }
-  #seatbelt {
-    position: relative;
-    left: 6.5vh!important;
-  }
   altitude {
     font-size: 1.2vh!important;
   }
@@ -59,11 +46,6 @@
     left: 2.4vh!important;
     bottom: 6.1%!important;
 	  width: 29.3vh!important;
-  }
-  .circle {
-    left: 3.6vh!important;
-	  width: 27.6vh!important;
-	  bottom: 6.9%!important;
   }
 }
 
@@ -78,10 +60,6 @@
     position: relative;
     left: 11.2vh!important;
   }
-  #seatbelt {
-    position: relative;
-    left: 8.8vh!important;
-  }
   altitude {
     font-size: 1.4vh!important;
   }
@@ -92,11 +70,6 @@
     left: 2.3vh!important;
     bottom: 6.1%!important;
 	  width: 29.3vh!important;
-  }
-  .circle {
-    left: 3.5vh!important;
-	  width: 27.6vh!important;
-	  bottom: 6.9%!important;
   }
 }
 
@@ -111,10 +84,6 @@
     position: relative;
     left: 11vh!important;
   }
-  #seatbelt {
-    position: relative;
-    left: 8.8vh!important;
-  }
   altitude {
     font-size: 1.4vh!important;
   }
@@ -124,11 +93,6 @@
   .square {
     left: 2.3vh!important;
     bottom: 6%!important;
-  }
-  .circle {
-    left: 3.5vh!important;
-	  width: 27.6vh!important;
-	  bottom: 6.7%!important;
   }
 }
 
@@ -143,10 +107,6 @@
     position: relative;
     left: 10vh!important;
   }
-  #seatbelt {
-    position: relative;
-    left: 8vh!important;
-  }
   altitude {
     font-size: 1.6vh!important;
   }
@@ -156,11 +116,6 @@
   .square {
     left: 2vh!important;
     bottom: 6%!important;
-  }
-  .circle {
-    left: 2.7vh!important;
-	  width: 27.6vh!important;
-	  bottom: 7%!important;
   }
 }
 
@@ -175,10 +130,6 @@
     position: relative;
     left: 10vh!important;
   }
-  #seatbelt {
-    position: relative;
-    left: 8vh!important;
-  }
   altitude {
     font-size: 1.8vh!important;
   }
@@ -188,11 +139,6 @@
   .square {
     left: 2.2vh!important;
     bottom: 6%!important;
-  }
-  .circle {
-    left: 3.2vh!important;
-	  width: 27.6vh!important;
-	  bottom: 7%!important;
   }
 }
 
@@ -206,10 +152,6 @@
     position: relative;
     left: 11vh!important;
   }
-  #seatbelt {
-    position: relative;
-    left: 8.5vh!important;
-  }
   altitude {
     font-size: 2vh!important;
   }
@@ -219,11 +161,6 @@
   .square {
     left: 2.5vh!important;
     bottom: 6%!important;
-  }
-  .circle {
-    left: 3.7vh!important;
-    width: 27.3vh!important;
-    bottom: 7%!important;
   }
 }
 
@@ -238,10 +175,6 @@
     position: relative;
     left: 11vh!important;
   }
-  #seatbelt {
-    position: relative;
-    left: 8.5vh!important;
-  }
   altitude {
     font-size: 3vh!important;
   }
@@ -251,10 +184,5 @@
   .square {
     left: 2.5vh!important;
     bottom: 6%!important;
-  }
-  .circle {
-    left: 4vh!important;
-	  width: 27.6vh!important;
-	  bottom: 6.9%!important;
   }
 }
