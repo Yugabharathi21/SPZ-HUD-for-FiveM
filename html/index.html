@@ -189,17 +189,17 @@
                         </div>
                         </transition>
                         <transition name="fade">
-                        <div v-if="showHealth">
-                            <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: healthColor}" :min="0" :max="100"></q-circular-progress>
-                            <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="health" size="50px" :thickness="0.24" :style="{color: healthColor}" :min="0" :max="100" center-color="grey-10">
-                            <q-icon style="top: -0.5px; left: -0.4px;" name="fas fa-heart" size="19.5px" color="white"/>
+                        <div  v-if="showHealth" class="player-container health-pos">
+                                <div class="player-bar h-b" :style="{ width: health}"></div>
+                                <div class="player-text" :style="{transform: 'rotate(0deg)' }">{{ health }}%</div>
+                                <q-icon class="player-icon" name="fas fa-heart"></q-icon>
                         </div>
                         </transition>
                         <transition name="fade">
-                        <div v-if="showArmor">
-                            <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: armorColor}" :min="0" :max="100"></q-circular-progress>
-                            <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="armor" size="50px" :thickness="0.24" :style="{color: armorColor}" :min="0" :max="100" center-color="grey-10">
-                            <q-icon name="fas fa-shield-alt" size="19.5px" color="white"/>
+                        <div v-if="showArmor" class="player-container armor-pos">
+                            <div class="player-bar a-b" :style="{ width: armor}"></div>
+                            <div class="player-text" :style="{transform: 'rotate(0deg)' }">{{ armor }}%</div>
+                            <q-icon class="player-icon" name="fas fa-shield-alt"></q-icon>
                         </div>
                         </transition>
                         <transition name="fade">
@@ -246,11 +246,9 @@
                         </transition>
                         <transition name="fade">
                             <div v-if="showEngine" class="engine-container">
-
                                 <div class="engine-bar" :style="{ width: engine + '%', backgroundColor: engineColor , boxShadow: '0px 0px 10px ' + engineColor}"></div>
                                 <div class="engine-text" :style="{transform: 'rotate(0deg)' }">{{ engine }}%</div>
                                 <q-icon class="engine-icon" name="fas fa-oil-can"></q-icon>
-
                               </div>                                                           
                         </transition>
                         <transition name="fade">
