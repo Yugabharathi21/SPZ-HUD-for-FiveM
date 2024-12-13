@@ -203,17 +203,17 @@
                         </div>
                         </transition>
                         <transition name="fade">
-                        <div v-if="showHunger">
-                            <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: hungerColor}" :min="0" :max="100"></q-circular-progress>
-                            <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="hunger" size="50px" :thickness="0.24" :style="{color: hungerColor}" :min="0" :max="100" center-color="grey-10">
-                            <q-icon style="top: -1px; left: -0.5px;" name="fas fa-hamburger" size="19.5px" color="white"/>
+                        <div v-if="showHunger" class="food-container hunger-pos">
+                            <div class="food-bar hu-b" :style="{ width: hunger}"></div>
+                            <div class="food-text" :style="{transform: 'rotate(0deg)' }">{{ hunger }}%</div>
+                            <q-icon class="food-icon" name="fas fa-hamburger"></q-icon>
                         </div>
                         </transition>
                         <transition name="fade">
-                        <div v-if="showThirst">
-                            <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" :style="{color: thirstColor}" :min="0" :max="100"></q-circular-progress>
-                            <q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="thirst" size="50px" :thickness="0.24" :style="{color: thirstColor}" :min="0" :max="100" center-color="grey-10">
-                            <q-icon style="top: -0.5px; left: -0.5px;" name="fas fa-tint" size="19.5px" color="white"/>
+                        <div v-if="showThirst" class="food-container thirst-pos" >
+                            <div class="food-bar t-b" :style="{ width: thirst}"></div>
+                            <div class="food-text" :style="{transform: 'rotate(0deg)' }">{{ thirst }}%</div>
+                            <q-icon class="food-icon" name="fas fa-tint"></q-icon>
                         </div>
                         </transition>
                         <transition name="fade">
