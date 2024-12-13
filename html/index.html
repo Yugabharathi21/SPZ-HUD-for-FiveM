@@ -168,19 +168,19 @@
                 <div id="money-container">
                     <div id="money-cash">
                         <transition name="slide-fade">
-                            <p v-if="showCash"><span id="sign">$&nbsp;</span><span id="money">{{(cash)}}</span></p>
+                            <p v-if="showCash"><span id="minus" class="sign">💵&nbsp;</span><span class="money-text" id="money">{{(cash)}}</span></p>
                         </transition>
                     </div>
                     <div id="money-bank">
                         <transition name="slide-fade">
-                            <p v-if="showBank"><span id="sign">$&nbsp;<*/span><span id="bank">{{(bank)}}</span></p>
+                            <p v-if="showBank"><span id="minus" class="sign">💳&nbsp;</span></q-icon><span class="money-text" id="bank">{{(bank)}}</span></p>
                         </transition>
                     </div>
                     <div id="money-change" v-if="showUpdate">
-                        <p v-if="plus" id="money"><span id="plus">+&nbsp;</span><span id="money">{{(amount)}}</span></p>
-                        <p v-else-if="minus" id="minus"><span id="minus">-&nbsp;</span><span id="money">{{(amount)}}</span></p>
+                        <p v-if="plus" id="money"><span id="plus">➕&nbsp;</span><span class="money-text" id="money">{{(amount)}}</span></p>
+                        <p v-else-if="minus" id="minus"><span id="minus">➖&nbsp;</span><span class="money-text" id="money">{{(amount)}}</span></p>
                     </div>
-                </div>
+                </div>                
                 <div id="ui-container">
                     <div id="playerHud" v-show="show">
                         <transition name="fade">
