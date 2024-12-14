@@ -12,23 +12,6 @@
         <script src="app.js" defer></script>
     </head>
     <body>
-        <div id="baseplate-container" v-show="show">
-            <div v-if="showStreets" class="street-container">
-                <div class="street">
-                    {{ street1 }}
-                    <br>
-                    <span v-if="street2"> & {{ street2 }}</span>
-                  </div>
-                  <div class="degree-container">
-                    <div v-if="showDegrees" class="degrees"></div>
-                </div>
-                  <div class="street-icon-contianer">
-                <q-icon name="fas fa-location" class="street-icon"size="19.5px" color="white"/>
-            </div>
-
-            </div>
-            </div>
-            </div>
             <div id="openmenu">
                 <div id="menu">
                     <q-splitter v-model="splitterModel" style="height: 50vh;">
@@ -165,6 +148,21 @@
                 </div>
             </div>
             <div id="main-container">
+                <div id="baseplate-container" v-show="show">
+                    <div v-if="showStreets" class="street-container">
+                        <div class="street">
+                            {{ street1 }}
+                            <br>
+                            <span v-if="street2"> & {{ street2 }}</span>
+                          </div>
+                          <div class="degree-container">
+                            <div v-if="showDegrees" class="degrees"></div>
+                        </div>
+                          <div class="street-icon-contianer">
+                        <q-icon name="fas fa-location" class="street-icon"size="19.5px" color="white"/>
+                    </div>
+                    </div>
+                    </div>
                 <div id="money-container">
                     <div id="money-cash">
                         <transition name="slide-fade">
@@ -177,8 +175,8 @@
                         </transition>
                     </div>
                     <div id="money-change" v-if="showUpdate">
-                        <p v-if="plus" id="money"><span id="plus">➕&nbsp;</span><span class="money-text" id="money">{{(amount)}}</span></p>
-                        <p v-else-if="minus" id="minus"><span id="minus">➖&nbsp;</span><span class="money-text" id="money">{{(amount)}}</span></p>
+                        <p v-if="plus" id="money"><span id="plus" class="sign"></span>>➕&nbsp;</span><span class="money-text" id="money">{{(amount)}}</span></p>
+                        <p v-else-if="minus" id="minus"><span id="minus" class="sign"></span>>➖&nbsp;</span><span class="money-text" id="money">{{(amount)}}</span></p>
                     </div>
                 </div>                
                 <div id="ui-container">

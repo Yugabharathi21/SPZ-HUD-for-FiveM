@@ -68,47 +68,47 @@ div#q-loading-bar { display: none!important; } /* makes sure there's no ajax loa
   right: 2vw;
   display: flex;
   flex-direction: column;
-  background: #33333394;
   border-radius: 8px;
-  padding: 5px;
+  height: auto;
+  padding: 10px;
   box-shadow: 0px 0px 120px rgba(255, 255, 255, 0.4);
   font-family: 'Pricedown Bl', sans-serif;
   color: white;
   width: auto;
+  background: #33333396;
 }
 
 #money-text{
   padding: 3px;
-  color: white;
-  background-color: linear-gradient(180deg, rgba(0, 131, 25, 0.4) 20%, rgba(40, 176, 0, 0.4) 59%);
+  background: linear-gradient(180deg, rgba(0, 131, 25, 0.4) 20%, rgba(40, 176, 0, 0.4) 59%);
 }
 
 #money-cash p, #money-bank p, #money-change p {
   font-size: 22px;
-  padding: 10px;
+  padding: 2px;
   margin: 0;
+  height: 40px;
   display: flex;
+  color: white;
+  background: linear-gradient(180deg, rgba(0, 131, 25, 0.4) 20%, rgba(40, 176, 0, 0.4) 59%);
 }
 
 #sign {
   color: white;
   font-weight: bold;
   font-size: 10px;
-  background-color: linear-gradient(180deg, rgba(0, 131, 25, 0.4) 20%, rgba(40, 176, 0, 0.4) 59%);
-  padding: 4px;
-  border-radius: 4px;
-
+  background: #333;
 }
 
 #money {
   font-size: 22px;
   font-weight: bold;
-  color: #ffffff;
+  color: #ffffff; 
+  padding: 5px;
 }
 
 #bank {
   color: #00a2ff;
-  font-weight: bold;
 }
 
 #plus {
@@ -120,13 +120,6 @@ div#q-loading-bar { display: none!important; } /* makes sure there's no ajax loa
   color: #ff0000;
   font-size: 24px;
 }
-
-.money-container {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
 
 /* Player HUD */
 
