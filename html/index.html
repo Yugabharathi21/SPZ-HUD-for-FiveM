@@ -302,12 +302,17 @@
                             <q-icon class="fuel-icon" name="fas fa-gas-pump"></q-icon>
                             <div class="fuel-text" id="fuel-text">70%</div>
                           </div>                          
+                          <div class="altitude-container" v-if="showAltitude">
+                            <div class="altitude-dial">
+                              <div class="dial-numbers" id="dialNumbers">
+                                <div v-for="n in 100" :key="n" class="dial-number">{{ 1000 - (n - 1) * 10 }} </div>
+                              </div>
+                              <div class="dial-indicator"></div>
+                            </div>
+                          </div>
                           
-                        <div class="responsive" id="altitudegauge" v-if="showAltitude">
-                            <q-circular-progress class="q-ml-xl" style="transform: rotate(-135deg); opacity: 60%;" :value="altitudegauge" size="70px" :thickness="0.21" color="gauge" :min="0" :max="100"></q-circular-progress>
-                            <q-circular-progress class="q-ml-xl" style="transform: rotate(-135deg); left: -50%;" show-value :value="altitude" size="70px" :thickness="0.21" color="gauge" :min="0" :max="750">
-                            <altitude>{{(altitude)}}</altitude>
-                        </div>  
+                        
+                        
                         <transition name="fade">
                             <div class="seatbelt-container">
                                 <q-icon name="fas fa-user-slash" class="seatbelt-icon" :value="seatbelt" :style="{color: seatbeltColor}"></q-icon>

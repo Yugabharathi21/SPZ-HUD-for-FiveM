@@ -1013,6 +1013,7 @@ const vehHud = {
       this.showAltitude = data.showAltitude;
       this.showSquareB = data.showSquareB;
       this.showCircleB = data.showCircleB;
+  
       if (data.seatbelt === true) {
         this.seatbelt = 1;
         this.seatbeltColor = "white";
@@ -1020,17 +1021,19 @@ const vehHud = {
         this.seatbelt = 0;
         this.seatbeltColor = "#FF5100";
       }
+  
       if (data.showSeatbelt === true) {
         this.showSeatbelt = true;
       } else {
         this.showSeatbelt = false;
       }
+  
       if (data.showAltitude === true) {
         this.showAltitude = true;
       } else {
         this.showAltitude = false;
       }
-
+  
       // Update fuel color based on value
       if (this.fuel <= 20) {
         this.fuelColor = "#ff0000";
@@ -1039,25 +1042,66 @@ const vehHud = {
       } else {
         this.fuelColor = "#FFFFFF";
       }
-
+  
       // Call function to update fuel bar in the frontend
       this.updateFuelBar(this.fuel);
-      
+  
       if (data.showSquareB === true) {
         this.showSquare = true;
       } else {
         this.showSquare = false;
       }
+  
       if (data.showCircleB === true) {
         this.showCircle = true;
       } else {
         this.showCircle = false;
       }
+  
       if (data.isPaused === 1) {
         this.show = false;
       }
+  
+      // === Altitude Logic ===
+      if (data.showAltitude) {
+        try {
+          const maxAltitude = 1000; // Maximum altitude value
+          const numberHeight = 20; // Height of each number
+          const totalNumbers = 100; // Total number of steps
+  
+          const dialElement = document.getElementById('dialNumbers');
+          if (!dialElement) {
+            console.error("Element with ID 'dialNumbers' not found");
+            return;
+          }
+  
+          // Inverted Calculation for Altitude Direction
+          const altitudeRatio = data.altitude / maxAltitude;
+          const translateY = (altitudeRatio * (numberHeight * totalNumbers));
+  
+          // Check if altitude increased or decreased
+          const prevAltitude = this.prevAltitude || data.altitude; // Store previous altitude for comparison
+          if (data.altitude > prevAltitude) {
+            // Altitude increased, move upwards
+            dialElement.style.transition = "transform 0.05s cubic-bezier(0.25, 0.8, 0.25, 1)";
+          } else if (data.altitude < prevAltitude) {
+            // Altitude decreased, move downwards
+            dialElement.style.transition = "transform 0.05s cubic-bezier(0.25, 0.8, 0.25, 1)";
+          }
+  
+          // Update the transformation for altitude change
+          dialElement.style.transform = `translateY(-${translateY}px)`; // Move based on altitude
+  
+          // Update previous altitude for the next comparison
+          this.prevAltitude = data.altitude;
+  
+          console.log(`Altitude: ${data.altitude}, TranslateY: ${translateY}`);
+        } catch (error) {
+          console.error("Error updating altitude gauge:", error);
+        }
+      }
     },
-
+  
     // Update fuel bar and text based on the fuel value
     updateFuelBar(fuelLevel) {
       // Update the fuel bar and text based on fuel level
@@ -1065,7 +1109,9 @@ const vehHud = {
       document.getElementById('fuel-text').textContent = Math.round(fuelLevel) + '%';
     }
   },
-};
+  
+  
+};  
 const app3 = Vue.createApp(vehHud);
 app3.use(Quasar);
 app3.mount("#veh-container");
