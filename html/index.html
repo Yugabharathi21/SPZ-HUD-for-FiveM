@@ -12,6 +12,7 @@
         <script src="app.js" defer></script>
     </head>
     <body>
+
             <div id="openmenu">
                 <div id="menu">
                     <q-splitter v-model="splitterModel" style="height: 50vh;">
@@ -147,7 +148,6 @@
                     </q-splitter>
                 </div>
             </div>
-            <div id="main-container">
                 <div id="baseplate-container" v-show="show">
                     <div v-if="showStreets" class="street-container">
                         <div class="street">
@@ -163,22 +163,35 @@
                     </div>
                     </div>
                     </div>
-                <div id="money-container">
-                    <div id="money-cash">
-                        <transition name="slide-fade">
-                            <p v-if="showCash"><span id="minus" class="sign">💵&nbsp;</span><span class="money-text" id="money">{{(cash)}}</span></p>
-                        </transition>
+                    <div id="money-container">
+                        <div id="money-cash">
+                            <transition name="slide-fade">
+                                <p v-if="showCash">
+                                    <span class="sign">💵&nbsp;</span>
+                                    <span class="money-text">{{(cash)}}</span>
+                                </p>
+                            </transition>
+                        </div>
+                        <div id="money-bank">
+                            <transition name="slide-fade">
+                                <p v-if="showBank">
+                                    <span class="sign">💳&nbsp;</span>
+                                    <span class="money-text">{{(bank)}}</span>
+                                </p>
+                            </transition>
+                        </div>
+                        <div id="money-change" v-if="showUpdate">
+                            <p v-if="plus">
+                                <span class="sign">➕&nbsp;</span>
+                                <span class="money-text">{{(amount)}}</span>
+                            </p>
+                            <p v-else-if="minus">
+                                <span class="sign">➖&nbsp;</span>
+                                <span class="money-text">{{(amount)}}</span>
+                            </p>
+                        </div>
                     </div>
-                    <div id="money-bank">
-                        <transition name="slide-fade">
-                            <p v-if="showBank"><span id="minus" class="sign">💳&nbsp;</span></q-icon><span class="money-text" id="bank">{{(bank)}}</span></p>
-                        </transition>
-                    </div>
-                    <div id="money-change" v-if="showUpdate">
-                        <p v-if="plus" id="money"><span id="plus" class="sign"></span>>➕&nbsp;</span><span class="money-text" id="money">{{(amount)}}</span></p>
-                        <p v-else-if="minus" id="minus"><span id="minus" class="sign"></span>>➖&nbsp;</span><span class="money-text" id="money">{{(amount)}}</span></p>
-                    </div>
-                </div>                
+                             
                 <div id="ui-container">
                     <div id="playerHud" v-show="show">
                         <transition name="fade">
