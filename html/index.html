@@ -223,18 +223,20 @@
             </transition>
             <transition name="fade">
                <div v-if="showHunger" class="food-container hunger-pos">
-                  <div class="food-bar hu-b" :style="{ width: hunger}"></div>
-                  <div class="food-text" :style="{transform: 'rotate(0deg)' }">{{ hunger }}%</div>
-                  <q-icon class="food-icon" name="fas fa-hamburger"></q-icon>
+                   <div class="food-bar hu-b" :style="{ height: hunger + '%'}"></div>
+                   <div class="food-text" :style="{transform: 'rotate(0deg)' }">{{ hunger }}%</div>
+                   <q-icon class="food-icon" name="fas fa-hamburger"></q-icon>
                </div>
-            </transition>
-            <transition name="fade">
-               <div v-if="showThirst" class="food-container thirst-pos" >
-                  <div class="food-bar t-b" :style="{ width: thirst}"></div>
-                  <div class="food-text" :style="{transform: 'rotate(0deg)' }">{{ thirst }}%</div>
-                  <q-icon class="food-icon" name="fas fa-tint"></q-icon>
+           </transition>
+           
+           <transition name="fade">
+               <div v-if="showThirst" class="food-container thirst-pos">
+                   <div class="food-bar t-b" :style="{ height: thirst + '%'}"></div>
+                   <div class="food-text" :style="{transform: 'rotate(0deg)' }">{{ thirst }}%</div>
+                   <q-icon class="food-icon" name="fas fa-tint"></q-icon>
                </div>
-            </transition>
+           </transition>
+           
             <transition name="fade">
                <div v-if="showStress">
                   <q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static" size="50px" :thickness="0.24" color="stress" :min="0" :max="100"></q-circular-progress>
@@ -301,6 +303,11 @@
          </div>
       </div>
       <div id="veh-container">
+         <div class="hud-container">
+            <div id="waypointArrow" class="waypoint-arrow"></div>
+<div id="waypointDistance" class="distance-display">500m</div>
+          </div>
+        
          <div v-show="show">
             <div class="speeddail" id="speedometer">
                <div class="speed">{{ speed }}</div>

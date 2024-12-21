@@ -457,7 +457,7 @@ speed:after {
 .voice-container {
     position: fixed;
     /* Fixed position */
-    bottom: 205px;
+    bottom: 225px;
     left: 343px;
     width: auto;
     height: auto;
@@ -577,7 +577,7 @@ speed:after {
 .street-container {
     bottom: 50px;
     /* Adjusted distance from the bottom edge */
-    left: 340px;
+    left: 350px;
     /* Adjusted left position */
     width: auto;
     /* Define a specific width for the container */
@@ -634,29 +634,29 @@ speed:after {
     /* Fixed position */
     transform: rotate(0deg);
     /* Adjust rotation angle */
-    height: 20px;
+    height: 26px;
     width: 100px;
     background-color: #33333350;
-    border-radius: 3px;
+    border-color: #fff;
     box-shadow: 0px 0px 150px rgb(255, 255, 255);
 }
 
 .health-pos {
     bottom: 120px;
-    left: 385px;
+    left: 355px;
 }
 
 .h-b {
-    background-color: #ff000034;
+    background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
 }
 
 .a-b {
-    background-color: #00a2ff34;
+    background: linear-gradient(180deg, rgba(131, 48, 0, 0.397) 20%, rgba(176, 79, 0, 0.397) 59%);
 }
 
 .armor-pos {
-    bottom: 150px;
-    left: 385px;
+    bottom: 120px;
+    left: 465px;
 }
 
 .player-bar {
@@ -669,17 +669,16 @@ speed:after {
     font-size: 14px;
     font-weight: bold;
     position: absolute;
-    top: 0px;
-    left: 10px;
+    top: 5px;
+    right: 3px;
 }
 
 .player-icon {
     size: 3px;
     color: #fff;
     top: -23px;
-    right: 30px;
+    right: 0px;
     position: absolute;
-    background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
     border-radius: 8px;
     padding: 6px;
 }
@@ -689,34 +688,47 @@ speed:after {
     /* Fixed position */
     transform: rotate(0deg);
     /* Adjust rotation angle */
-    height: 20px;
-    width: 100px;
+    height: 35px;  /* Set height to a square size */
+    width: 35px;   /* Set width to a square size */
     background-color: #33333350;
-    border-radius: 3px;
     box-shadow: 0px 0px 150px rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align bars from the bottom */
 }
 
 .hunger-pos {
-    bottom: 120px;
-    left: 520px;
-}
-
-.hu-b {
-    background-color: #bbff0034;
-}
-
-.t-b {
-    background-color: #ffbb0034;
+    bottom: 160px;
+    left: 355px;
 }
 
 .thirst-pos {
-    bottom: 150px;
-    left: 520px;
+    bottom: 160px;
+    left: 400px;
+}
+
+.hu-b {
+    background: linear-gradient(180deg, rgba(131, 111, 0, 0.397) 20%, rgba(176, 120, 0, 0.397) 59%);
+    height: 100%; /* Fill the container height */
+    border-radius: 3.5px;
+    width: 100%;  /* Fill the container width */
+    position: absolute;
+    bottom: 0;  /* Start from the bottom */
+}
+
+.t-b {
+    background: linear-gradient(180deg, rgba(0, 94, 131, 0.397) 20%, rgba(0, 135, 176, 0.397) 59%);
+    height: 100%; /* Fill the container height */
+    border-radius: 3.5px;
+    width: 100%;  /* Fill the container width */
+    position: absolute;
+    bottom: 0;  /* Start from the bottom */
 }
 
 .food-bar {
-    height: 100%;
-    border-radius: 3.5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 .food-text {
@@ -724,20 +736,20 @@ speed:after {
     font-size: 14px;
     font-weight: bold;
     position: absolute;
-    top: 0px;
-    left: 10px;
+    top: -19px;
+    right: 1px;
 }
 
 .food-icon {
     size: 3px;
     color: #fff;
-    top: -23px;
-    right: 30px;
+    top: -3px;
+    right: 0px;
     position: absolute;
-    background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
     border-radius: 8px;
     padding: 6px;
 }
+
 
 .pointer {
     position: absolute;
