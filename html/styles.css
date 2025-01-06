@@ -549,59 +549,41 @@ speed:after {
 .street-container,
 .degree-container {
     position: absolute;
-    /* Positioning relative to the viewport */
     background: rgba(49, 49, 49, 0.58);
-    /* Semi-transparent dark background */
     border-radius: 10px;
-    /* Rounded corners */
-    padding: 8px 20px;
-    /* Padding inside the box */
+    padding: 2px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    /* Subtle shadow for a raised look */
     border: 1px solid rgba(255, 255, 255, 0.2);
-    /* Optional border for definition */
     display: flex;
-    /* Use flexbox for layout */
     justify-content: space-between;
-    /* Ensure elements are spaced between */
     align-items: center;
-    /* Center content vertically */
     height: auto;
-    /* Set a fixed height */
     box-shadow: 0px 0px 150px white;
-    /* Glow effect */
     z-index: -10000000px;
 }
 
-/* Specific styles for street-container2 */
 .street-container {
-    bottom: 50px;
-    /* Adjusted distance from the bottom edge */
-    left: 350px;
-    /* Adjusted left position */
+    top: 20px;
+    left: 750px;
     width: auto;
-    /* Define a specific width for the container */
 }
 
 .street-icon-contianer {
     position: relative;
     background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
-    border-radius: 9px;
+    border-radius: 6px;
     width: auto;
-    padding: 10px;
+    padding: 4px;
     left: 10px;
 }
 
 .street-icon {
-    width: 10px;
+    width: 3px;
 }
-
 
 .street {
     color: rgb(255, 255, 255);
-    /* White color */
     text-align: right;
-    /* Align text to the right */
     font-size: 1.4vh;
     font-weight: 800;
     letter-spacing: 0.7px;
@@ -612,10 +594,10 @@ speed:after {
 .degree-container {
     position: relative;
     background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
-    border-radius: 9px;
-    height: 40px;
+    border-radius: 5px;
+    height: 25px;
     width: auto;
-    padding: 10px;
+    padding: 6px;
     left: 5px;
 }
 
@@ -793,3 +775,4 @@ speed:after {
     font-weight: 600;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6);
 }
+

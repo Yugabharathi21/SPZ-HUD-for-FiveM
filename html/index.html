@@ -160,9 +160,7 @@
       <div id="baseplate-container" v-show="show">
          <div v-if="showStreets" class="street-container">
             <div class="street">
-               {{ street1 }}
-               <br>
-               <span v-if="street2"> & {{ street2 }}</span>
+               {{ street1 }}<span v-if="street2"> | {{ street2 }}</span>
             </div>
             <div class="degree-container">
                <div v-if="showDegrees" class="degrees"></div>
