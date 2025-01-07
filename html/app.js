@@ -1081,7 +1081,7 @@ const vehHud = {
                         console.error("Element with ID 'dialNumbers' not found");
                         return;
                     }
-
+                    //5,7,18,19
                     // Inverted Calculation for Altitude Direction
                     const altitudeRatio = data.altitude / maxAltitude;
                     const translateY = (altitudeRatio * (numberHeight * totalNumbers));
