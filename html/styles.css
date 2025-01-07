@@ -11,768 +11,648 @@
     font-weight: normal;
     font-style: normal;
 }
-
-
 /* Menu */
 div#openmenu {
-    display: none;
-    position: absolute;
-    width: 50%;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	display:none;
+	position:absolute;
+	width:50%;
+	top:45%;
+	left:50%;
+	transform:translate(-50%,-50%);
 }
-
 .brand-logo {
-    width: 25%;
+	width:25%;
 }
-
 /* when using an svg all you need to change is the width and it will resize it */
 
 /* Menu tab & panel styles */
 .text-tabcolor {
-    color: rgb(255, 255, 255) !important;
+	color:rgb(255,255,255) !important;
 }
-
 .bg-active-tab {
-    background: rgb(23 23 23) !important;
+	background:rgb(23 23 23) !important;
 }
-
 .bg-panel {
-    background: rgb(30 30 30) !important;
+	background:rgb(30 30 30) !important;
 }
-
 .q-tab-panels {
-    border-top-right-radius: 12px !important;
-    border-bottom-right-radius: 12px !important;
+	border-top-right-radius:12px !important;
+	border-bottom-right-radius:12px !important;
 }
-
 /* change all 12px for a different border radius (rounds edges of the menu) */
 .q-splitter__panel.q-splitter__before {
-    border-top-left-radius: 12px !important;
-    border-bottom-left-radius: 12px !important;
+	border-top-left-radius:12px !important;
+	border-bottom-left-radius:12px !important;
 }
-
 /* change all 12px for a different border radius (rounds edges of the menu) */
 .q-tabs--vertical.q-tabs--not-scrollable .q-tabs__content {
-    border-top-left-radius: 12px !important;
-    border-bottom-left-radius: 12px !important;
+	border-top-left-radius:12px !important;
+	border-bottom-left-radius:12px !important;
 }
-
 /* change all 12px for a different border radius (rounds edges of the menu) */
 
 /* Menu text styles */
 .text-h6 {
-    color: rgb(255, 255, 255) !important;
+	color:rgb(255,255,255) !important;
 }
-
 .text-h7 {
-    color: rgba(255, 255, 255, 0.8) !important;
+	color:rgba(255,255,255,0.8) !important;
 }
-
 /* Menu buttons & checkboxes & toggle switch icons styles */
 .text-textbutton {
-    color: rgb(0, 0, 0) !important;
+	color:rgb(0,0,0) !important;
 }
-
 .bg-bgbutton {
-    background: rgb(140, 0, 255) !important;
+	background:rgb(140,0,255) !important;
 }
-
 .q-checkbox__inner {
-    color: rgb(255 255 255 / 70%) !important;
+	color:rgb(255 255 255 / 70%) !important;
 }
-
 .text-checkbox {
-    color: rgba(183, 0, 255, 0.651) !important;
+	color:rgba(183,0,255,0.651) !important;
 }
-
 .q-checkbox__svg {
-    color: rgb(0, 0, 0) !important;
+	color:rgb(0,0,0) !important;
 }
-
 .q-checkbox__inner--truthy .q-checkbox__bg {
-    box-shadow: 0px 0px 3px 3px rgb(220 20 60 / 15%) !important;
+	box-shadow:0px 0px 3px 3px rgb(220 20 60 / 15%) !important;
 }
-
 /* if you want the checkboxes to have a glow/shadow */
 .text-toggleicons {
-    color: rgb(0, 0, 0) !important;
+	color:rgb(0,0,0) !important;
 }
-
 /* Menu misc */
 hr {
-    opacity: 0.1 !important;
+	opacity:0.1 !important;
 }
-
 /* horizontal line that seperates sections */
 .q-mb-md {
-    margin-bottom: 0px !important;
+	margin-bottom:0px !important;
 }
-
 /* removes extra top padding */
 .q-mb-md-d {
-    padding-left: 10px !important;
-    padding-bottom: 10px !important;
+	padding-left:10px !important;
+	padding-bottom:10px !important;
 }
-
 /* keeps q-items aligned */
 .q-item {
-    padding: 8px 0px !important;
+	padding:8px 0px !important;
 }
-
 /* keeps q-items aligned */
 .q-item__section--avatar {
-    min-width: 40px !important
+	min-width:40px !important
 }
-
 /* keeps q-items aligned */
 .q-item__section--side {
-    padding-right: 0px !important;
+	padding-right:0px !important;
 }
-
 /* keeps q-items aligned */
 .q-splitter--vertical>.q-splitter__separator {
-    width: 0px !important;
+	width:0px !important;
 }
-
 /* keeps navigation tab panel seamless */
 div#q-loading-bar {
-    display: none !important;
+	display:none !important;
 }
-
-/* makes sure there's no ajax load from quasar */
-::-webkit-scrollbar {
-    display: none !important;
+/* makes sure there's no ajax load from quasar */::-webkit-scrollbar {
+	display:none !important;
 }
-
 /* makes sure there's no ugly scrollbar on menu*/
 
 /* Hud radial styles */
 .text-health {
-    color: rgb(33, 171, 97) !important;
+	color:rgb(33,171,97) !important;
 }
-
 .text-stress {
-    color: rgb(255, 0, 0) !important;
+	color:rgb(255,0,0) !important;
 }
-
 .text-nos {
-    color: rgb(255, 72, 133) !important;
+	color:rgb(255,72,133) !important;
 }
-
 .text-cruise {
-    color: rgb(255, 72, 133) !important;
+	color:rgb(255,72,133) !important;
 }
-
 .text-armed {
-    color: rgb(255, 72, 133) !important;
+	color:rgb(255,72,133) !important;
 }
-
 .text-harness {
-    color: rgb(182, 72, 255) !important;
+	color:rgb(182,72,255) !important;
 }
-
 .text-oxygen {
-    color: rgb(138, 168, 189) !important;
+	color:rgb(138,168,189) !important;
 }
-
 .text-parachute {
-    color: rgb(0, 0, 0) !important;
+	color:rgb(0,0,0) !important;
 }
-
 .text-dev {
-    color: rgb(0, 0, 0) !important;
+	color:rgb(0,0,0) !important;
 }
-
 .text-gauge {
-    color: rgb(255, 255, 255) !important;
+	color:rgb(255,255,255) !important;
 }
-
 #main-container {
-    width: 100%;
-    height: auto;
+	width:100%;
+	height:auto;
 }
-
 #money-container {
-    position: fixed;
-    top: 5vh;
-    right: 2vw;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    border-radius: 12px;
-    padding: 15px;
-    background: rgba(51, 51, 51, 0);
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0), 0px 0px 120px rgba(255, 255, 255, 0);
-    font-family: 'Pricedown Bl', sans-serif;
-    color: white;
-    z-index: 1000;
+	position:fixed;
+	top:5vh;
+	right:2vw;
+	display:flex;
+	flex-direction:column;
+	gap:10px;
+	border-radius:12px;
+	padding:15px;
+	background:rgba(51,51,51,0);
+	box-shadow:0px 0px 15px rgba(0,0,0,0),0px 0px 120px rgba(255,255,255,0);
+	font-family:'Pricedown Bl',sans-serif;
+	color:white;
+	z-index:1000;
 }
-
 .money-text {
-    padding: 5px 10px;
-    border-radius: 6px;
-    font-weight: bold;
-    background: linear-gradient(180deg, rgba(0, 255, 128, 0.2), rgba(0, 255, 128, 0));
-    animation: glow-text 2s infinite;
+	padding:5px 10px;
+	border-radius:6px;
+	font-weight:bold;
+	background:linear-gradient(180deg,rgba(0,255,128,0.2),rgba(0,255,128,0));
+	animation:glow-text 2s infinite;
 }
-
-#money-cash p,
-#money-bank p,
-#money-change p {
-    font-size: 22px;
-    margin: 0;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    border-radius: 8px;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.623), rgba(0, 0, 0, 0.3));
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-    transition: all 0.3s ease;
+#money-cash p,#money-bank p,#money-change p {
+	font-size:22px;
+	margin:0;
+	padding:5px 10px;
+	display:flex;
+	align-items:center;
+	gap:5px;
+	border-radius:8px;
+	background:linear-gradient(90deg,rgba(0,0,0,0.623),rgba(0,0,0,0.3));
+	box-shadow:0px 4px 10px rgba(0,0,0,0.4);
+	transition:all 0.3s ease;
 }
-
-#money-cash p:hover,
-#money-bank p:hover,
-#money-change p:hover {
-    transform: scale(1.05);
+#money-cash p:hover,#money-bank p:hover,#money-change p:hover {
+	transform:scale(1.05);
 }
-
 .sign {
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+	color:white;
+	font-weight:bold;
+	font-size:18px;
+	text-shadow:0px 0px 10px rgba(255,255,255,0.8);
 }
-
 #money {
-    color: #ffffff;
+	color:#ffffff;
 }
-
 #bank {
-    color: #00a2ff;
+	color:#00a2ff;
 }
-
 #plus {
-    color: #00ff00;
-    font-size: 22px;
+	color:#00ff00;
+	font-size:22px;
 }
-
 #minus {
-    color: #ff4d4d;
-    font-size: 22px;
+	color:#ff4d4d;
+	font-size:22px;
 }
-
 @keyframes glow-text {
-
-    0%,
-    100% {
-        text-shadow: 0 0 5px #ffffff, 0 0 10px rgba(0, 255, 128, 0.8);
-    }
-
-    50% {
-        text-shadow: 0 0 10px #ffffff, 0 0 20px rgba(0, 255, 128, 1);
-    }
+	0%,100% {
+	text-shadow:0 0 5px #ffffff,0 0 10px rgba(0,255,128,0.8);
 }
-
-/* Player HUD */
+50% {
+	text-shadow:0 0 10px #ffffff,0 0 20px rgba(0,255,128,1);
+}
+}/* Player HUD */
 
 #playerhud {
-    position: absolute;
-    display: flex;
-    left: 3vh;
-    bottom: 0.2vw;
+	position:absolute;
+	display:flex;
+	left:3vh;
+	bottom:0.2vw;
 }
-
 .q-ml-xl {
-    margin-left: -22px !important;
-    /* Change this to space radials */
+	margin-left:-22px !important;
+	/* Change this to space radials */
 }
-
 /* Vehicle HUD */
 
 speed:after {
-    content: "KPH";
-    /* If using KPH change this content from MPH */
-    display: block;
-    padding-top: 3px;
-    padding-left: 2px;
-    padding-right: 2px;
-    padding-bottom: 8px;
-    font-weight: 900;
+	content:"KPH";
+	/* If using KPH change this content from MPH */
+    display:block;
+	padding-top:3px;
+	padding-left:2px;
+	padding-right:2px;
+	padding-bottom:8px;
+	font-weight:900;
 }
-
 .altitude-container {
-    position: fixed;
-    bottom: 13vh;
-    right: 10.4vw;
-    width: 60px;
-    height: 50px;
-    background: rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 10px rgb(5, 156, 0);
-    border-radius: 6px;
-    overflow: hidden;
+	position:fixed;
+	bottom:13vh;
+	right:10.4vw;
+	width:60px;
+	height:50px;
+	background:rgba(0,0,0,0.5);
+	box-shadow:0px 0px 10px rgb(5,156,0);
+	border-radius:6px;
+	overflow:hidden;
 }
-
 .altitude-dial {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+	position:relative;
+	height:100%;
+	width:100%;
+	overflow:hidden;
 }
-
 .dial-numbers {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    transition: transform 0.01s cubic-bezier(0.005, 0.002, 0.002, 0.001);
-    /* Faster, smoother transition */
-    text-shadow: 0px 0px 100px rgb(89, 255, 73);
+	position:absolute;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	width:100%;
+	transition:transform 0.01s cubic-bezier(0.005,0.002,0.002,0.001);
+	/* Faster,smoother transition */
+    text-shadow:0px 0px 100px rgb(89,255,73);
 }
-
 .dial-number {
-    font-size: 14px;
-    font-weight: bold;
-    color: #00ff80;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
+	font-size:14px;
+	font-weight:bold;
+	color:#00ff80;
+	height:20px;
+	line-height:20px;
+	text-align:center;
 }
-
 .dial-indicator {
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: red;
-    top: 50%;
-    transform: translateY(-50%);
+	position:absolute;
+	width:100%;
+	height:2px;
+	background:red;
+	top:50%;
+	transform:translateY(-50%);
 }
-
 .alt-text {
-    bottom: 12vh;
-    color: #fff;
-    size: 10px;
-
+	bottom:12vh;
+	color:#fff;
+	size:10px;
 }
-
-
 .speed {
-    font-size: 8vh;
-    color: #ffffff80;
-    text-align: center;
-    font-family: 'sus', sans-serif;
-    text-shadow: 0px 0px 120px white;
+	font-size:8vh;
+	color:#ffffff80;
+	text-align:center;
+	font-family:'sus',sans-serif;
+	text-shadow:0px 0px 120px white;
 }
-
 .speeddail {
-    position: fixed !important;
-    bottom: 20px !important;
-    right: 80px !important;
-    z-index: 9999 !important;
-    text-align: center;
-    font-size: 2.4vh;
+	position:fixed !important;
+	bottom:20px !important;
+	right:80px !important;
+	z-index:9999 !important;
+	text-align:center;
+	font-size:2.4vh;
 }
-
 .fuel-container {
-    transform: rotate(-74.45deg);
-    position: fixed;
-    bottom: 80px;
-    right: 10px;
-    width: 100px;
-    height: 10px;
-    background-color: #333;
-    border-radius: 4px;
+	transform:rotate(-74.45deg);
+	position:fixed;
+	bottom:80px;
+	right:10px;
+	width:100px;
+	height:10px;
+	background-color:#333;
+	border-radius:4px;
 }
-
 .fuel-icon {
-    transform: rotate(75deg);
-    color: white;
-    size: 14px;
-    position: absolute;
-    top: 35px;
-    left: 10px;
-    background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
-    border-radius: 8px;
-    padding: 6px;
+	transform:rotate(75deg);
+	color:white;
+	size:14px;
+	position:absolute;
+	top:35px;
+	left:10px;
+	background:linear-gradient(180deg,rgba(0,131,25,0.396796218487395) 20%,rgba(40,176,0,0.396796218487395) 59%);
+	border-radius:8px;
+	padding:6px;
 }
-
 .fuel-bar {
-    height: 100%;
-    background-color: green;
-    border-radius: 4px;
-    box-shadow: 0px 0px 10px green;
+	height:100%;
+	background-color:green;
+	border-radius:4px;
+	box-shadow:0px 0px 10px green;
 }
-
 .fuel-text {
-    transform: rotate(80deg);
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    position: absolute;
-    top: 20px;
+	transform:rotate(80deg);
+	color:white;
+	font-size:14px;
+	font-weight:bold;
+	position:absolute;
+	top:20px;
 }
-
 .engine-container {
-    position: fixed;
-    /* Fixed position */
-    bottom: 140px;
-    right: 50px;
-    transform: rotate(0deg);
-    /* Adjust rotation angle */
-    width: 100px;
-    height: 10px;
-    background-color: #333;
-    box-shadow: 0px 0px 150px rgb(255, 255, 255);
+	position:fixed;
+	/* Fixed position */
+    bottom:140px;
+	right:50px;
+	transform:rotate(0deg);
+	/* Adjust rotation angle */
+    width:100px;
+	height:10px;
+	background-color:#333;
+	box-shadow:0px 0px 150px rgb(255,255,255);
 }
-
 .engine-bar {
-    height: 100%;
-    border-radius: 4px;
-
+	height:100%;
+	border-radius:4px;
 }
-
 .engine-text {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    position: absolute;
-    top: -20px;
+	color:white;
+	font-size:14px;
+	font-weight:bold;
+	position:absolute;
+	top:-20px;
 }
-
 .engine-icon {
-    size: 14px;
-    margin-top: 5px;
-    color: #fff;
-    top: -36px;
-    right: 40px;
-    position: absolute;
-    background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
-    border-radius: 8px;
-    padding: 10px;
+	size:14px;
+	margin-top:5px;
+	color:#fff;
+	top:-36px;
+	right:40px;
+	position:absolute;
+	background:linear-gradient(180deg,rgba(0,131,25,0.396796218487395) 20%,rgba(40,176,0,0.396796218487395) 59%);
+	border-radius:8px;
+	padding:10px;
 }
-
 .voice-container {
-    position: fixed;
-    /* Fixed position */
-    bottom: 225px;
-    left: 343px;
-    width: auto;
-    height: auto;
-    background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
-    box-shadow: 0px 0px 150px rgb(255, 255, 255);
-    border-radius: 6px;
+	position:fixed;
+	/* Fixed position */
+    bottom:225px;
+	left:343px;
+	width:auto;
+	height:auto;
+	background:linear-gradient(180deg,rgba(0,131,25,0.396796218487395) 20%,rgba(40,176,0,0.396796218487395) 59%);
+	box-shadow:0px 0px 150px rgb(255,255,255);
+	border-radius:6px;
 }
-
 .voice {
-    padding: 10px;
+	padding:10px;
 }
-
 .seatbelt-icon {
-    size: 14px;
-    color: #fff;
-    padding: 10px;
-    background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
-    border-radius: 8px;
+	size:14px;
+	color:#fff;
+	padding:10px;
+	background:linear-gradient(180deg,rgba(0,131,25,0.396796218487395) 20%,rgba(40,176,0,0.396796218487395) 59%);
+	border-radius:8px;
 }
-
 .seatbelt-container {
-    bottom: 155px;
-    right: 80px;
-    position: absolute;
+	bottom:155px;
+	right:80px;
+	position:absolute;
 }
-
-
-
 .border {
-    bottom: 7.9%;
-    left: 1.3%;
-    width: 0%;
-    text-align: center;
+	bottom:7.9%;
+	left:1.3%;
+	width:0%;
+	text-align:center;
 }
-
 .square {
-    bottom: 6.30%;
-    width: 29vh;
-    height: 18.5vh;
-    border: 4px solid #bababa;
-    position: absolute;
-    display: inline-block;
+	bottom:6.30%;
+	width:29vh;
+	height:18.5vh;
+	border:4px solid #bababa;
+	position:absolute;
+	display:inline-block;
 }
-
 .circle {
-    bottom: 6.9%;
-    width: 27vh;
-    height: 22.9vh;
-    border: 4px solid #bababa;
-    position: absolute;
-    display: inline-block;
-    border-radius: 50%;
+	bottom:6.9%;
+	width:27vh;
+	height:22.9vh;
+	border:4px solid #bababa;
+	position:absolute;
+	display:inline-block;
+	border-radius:50%;
 }
-
 /* Animation */
 .slide-fade-enter-active {
-    transition: all 0.3s ease-out;
+	transition:all 0.3s ease-out;
 }
-
 .slide-fade-leave-active {
-    transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+	transition:all 0.8s cubic-bezier(1,0.5,0.8,1);
 }
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-    transform: translateX(20px);
-    opacity: 0;
+.slide-fade-enter-from,.slide-fade-leave-to {
+	transform:translateX(20px);
+	opacity:0;
 }
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 2s ease;
+.fade-enter-active,.fade-leave-active {
+	transition:opacity 2s ease;
 }
-
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
+.fade-enter-from,.fade-leave-to {
+	opacity:0;
 }
-
 /* Compass */
 .baseplate {
-    position: relative;
-    margin: 0 auto;
-    top: -0.8vh;
-    width: 150px;
-    height: auto;
+	position:relative;
+	margin:0 auto;
+	top:-0.8vh;
+	width:150px;
+	height:auto;
 }
-
-.street-container,
-.degree-container {
-    position: absolute;
-    background: rgba(49, 49, 49, 0.58);
-    border-radius: 10px;
-    padding: 2px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
-    box-shadow: 0px 0px 150px white;
-    z-index: -10000000px;
+.street-container,.degree-container {
+	position:absolute;
+	background:rgba(49,49,49,0.58);
+	border-radius:10px;
+	padding:2px 20px;
+	box-shadow:0 4px 6px rgba(0,0,0,0.3);
+	border:1px solid rgba(255,255,255,0.2);
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	height:auto;
+	box-shadow:0px 0px 150px white;
+	z-index:-10000000px;
 }
-
 .street-container {
-    top: 20px;
-    left: 750px;
-    width: auto;
+	top:20px;
+	left:750px;
+	width:auto;
 }
-
 .street-icon-contianer {
-    position: relative;
-    background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
-    border-radius: 6px;
-    width: auto;
-    padding: 4px;
-    left: 10px;
+	position:relative;
+	background:linear-gradient(180deg,rgba(0,131,25,0.396796218487395) 20%,rgba(40,176,0,0.396796218487395) 59%);
+	border-radius:6px;
+	width:auto;
+	padding:4px;
+	left:10px;
 }
-
 .street-icon {
-    width: 3px;
+	width:3px;
 }
-
 .street {
-    color: rgb(255, 255, 255);
-    text-align: right;
-    font-size: 1.4vh;
-    font-weight: 800;
-    letter-spacing: 0.7px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+	color:rgb(255,255,255);
+	text-align:right;
+	font-size:1.4vh;
+	font-weight:800;
+	letter-spacing:0.7px;
+	font-family:Arial,Helvetica,sans-serif;
+	text-shadow:0 0 1px rgba(0,0,0,0.6);
 }
-
 .degree-container {
-    position: relative;
-    background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
-    border-radius: 5px;
-    height: 25px;
-    width: auto;
-    padding: 6px;
-    left: 5px;
+	position:relative;
+	background:linear-gradient(180deg,rgba(0,131,25,0.396796218487395) 20%,rgba(40,176,0,0.396796218487395) 59%);
+	border-radius:5px;
+	height:25px;
+	width:auto;
+	padding:6px;
+	left:5px;
 }
-
 .degrees {
-    font-family: 'Yantramanav', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-weight: 600;
-    text-shadow: 0 0 1px rgb(0 0 0 / 60%), 0 0 1px rgb(0 0 0 / 60%), 0 0 1px rgb(0 0 0 / 60%), 0 0 1px rgb(0 0 0 / 60%);
-    padding-left: -10px;
+	font-family:'Yantramanav',sans-serif;
+	color:rgb(255,255,255);
+	font-size:20px;
+	font-weight:600;
+	text-shadow:0 0 1px rgb(0 0 0 / 60%),0 0 1px rgb(0 0 0 / 60%),0 0 1px rgb(0 0 0 / 60%),0 0 1px rgb(0 0 0 / 60%);
+	padding-left:-10px;
 }
-
-
 .player-container {
-    position: fixed;
-    /* Fixed position */
-    transform: rotate(0deg);
-    /* Adjust rotation angle */
-    height: 26px;
-    width: 100px;
-    background-color: #33333350;
-    border-color: #fff;
-    box-shadow: 0px 0px 150px rgb(255, 255, 255);
+	position:fixed;
+	/* Fixed position */
+    transform:rotate(0deg);
+	/* Adjust rotation angle */
+    height:26px;
+	width:100px;
+	background-color:#33333350;
+	border-color:#fff;
+	box-shadow:0px 0px 150px rgb(255,255,255);
 }
-
 .health-pos {
-    bottom: 120px;
-    left: 355px;
+	bottom:120px;
+	left:355px;
 }
-
 .h-b {
-    background: linear-gradient(180deg, rgba(0, 131, 25, 0.396796218487395) 20%, rgba(40, 176, 0, 0.396796218487395) 59%);
+	background:linear-gradient(180deg,rgba(0,131,25,0.396796218487395) 20%,rgba(40,176,0,0.396796218487395) 59%);
 }
-
 .a-b {
-    background: linear-gradient(180deg, rgba(131, 48, 0, 0.397) 20%, rgba(176, 79, 0, 0.397) 59%);
+	background:linear-gradient(180deg,rgba(131,48,0,0.397) 20%,rgba(176,79,0,0.397) 59%);
 }
-
 .armor-pos {
-    bottom: 120px;
-    left: 465px;
+	bottom:120px;
+	left:465px;
 }
-
 .player-bar {
-    height: 100%;
-    border-radius: 3.5px;
+	height:100%;
+	border-radius:3.5px;
 }
-
 .player-text {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    position: absolute;
-    top: 5px;
-    right: 3px;
+	color:white;
+	font-size:14px;
+	font-weight:bold;
+	position:absolute;
+	top:5px;
+	right:3px;
 }
-
 .player-icon {
-    size: 3px;
-    color: #fff;
-    top: -23px;
-    right: 0px;
-    position: absolute;
-    border-radius: 8px;
-    padding: 6px;
+	size:3px;
+	color:#fff;
+	top:-23px;
+	right:0px;
+	position:absolute;
+	border-radius:8px;
+	padding:6px;
 }
-
 .food-container {
-    position: fixed;
-    /* Fixed position */
-    transform: rotate(0deg);
-    /* Adjust rotation angle */
-    height: 35px;  /* Set height to a square size */
-    width: 35px;   /* Set width to a square size */
-    background-color: #33333350;
-    box-shadow: 0px 0px 150px rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Align bars from the bottom */
+	position:fixed;
+	/* Fixed position */
+    transform:rotate(0deg);
+	/* Adjust rotation angle */
+    height:35px;
+	/* Set height to a square size */
+    width:35px;
+	/* Set width to a square size */
+    background-color:#33333350;
+	box-shadow:0px 0px 150px rgb(255,255,255);
+	display:flex;
+	justify-content:center;
+	align-items:flex-end;
+	/* Align bars from the bottom */
 }
-
 .hunger-pos {
-    bottom: 160px;
-    left: 355px;
+	bottom:160px;
+	left:355px;
 }
-
 .thirst-pos {
-    bottom: 160px;
-    left: 400px;
+	bottom:160px;
+	left:400px;
 }
-
 .hu-b {
-    background: linear-gradient(180deg, rgba(131, 111, 0, 0.397) 20%, rgba(176, 120, 0, 0.397) 59%);
-    height: 100%; /* Fill the container height */
-    border-radius: 3.5px;
-    width: 100%;  /* Fill the container width */
-    position: absolute;
-    bottom: 0;  /* Start from the bottom */
+	background:linear-gradient(180deg,rgba(131,111,0,0.397) 20%,rgba(176,120,0,0.397) 59%);
+	height:100%;
+	/* Fill the container height */
+    border-radius:3.5px;
+	width:100%;
+	/* Fill the container width */
+    position:absolute;
+	bottom:0;
+	/* Start from the bottom */
 }
-
 .t-b {
-    background: linear-gradient(180deg, rgba(0, 94, 131, 0.397) 20%, rgba(0, 135, 176, 0.397) 59%);
-    height: 100%; /* Fill the container height */
-    border-radius: 3.5px;
-    width: 100%;  /* Fill the container width */
-    position: absolute;
-    bottom: 0;  /* Start from the bottom */
+	background:linear-gradient(180deg,rgba(0,94,131,0.397) 20%,rgba(0,135,176,0.397) 59%);
+	height:100%;
+	/* Fill the container height */
+    border-radius:3.5px;
+	width:100%;
+	/* Fill the container width */
+    position:absolute;
+	bottom:0;
+	/* Start from the bottom */
 }
-
 .food-bar {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+	width:100%;
+	position:absolute;
+	bottom:0;
 }
-
 .food-text {
-    color: white;
-    font-size: 14px;
-    font-weight: bold;
-    position: absolute;
-    top: -19px;
-    right: 1px;
+	color:white;
+	font-size:14px;
+	font-weight:bold;
+	position:absolute;
+	top:-19px;
+	right:1px;
 }
-
 .food-icon {
-    size: 3px;
-    color: #fff;
-    top: -3px;
-    right: 0px;
-    position: absolute;
-    border-radius: 8px;
-    padding: 6px;
+	size:3px;
+	color:#fff;
+	top:-3px;
+	right:0px;
+	position:absolute;
+	border-radius:8px;
+	padding:6px;
 }
-
-
 .pointer {
-    position: absolute;
-    margin: 0 auto;
-    top: -2%;
-    left: 0;
-    right: 0;
-    font-family: 'Yantramanav', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 2.2vh;
-    text-align: center;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6);
-    z-index: 9999;
+	position:absolute;
+	margin:0 auto;
+	top:-2%;
+	left:0;
+	right:0;
+	font-family:'Yantramanav',sans-serif;
+	color:rgb(255,255,255);
+	font-size:2.2vh;
+	text-align:center;
+	text-shadow:0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6);
+	z-index:9999;
 }
-
-
-
 .bezel {
-    position: relative;
-    width: 100%;
-    height: 2vh;
-    font-family: 'Yantramanav', sans-serif;
-    font-size: 0.35vh;
-    font-weight: 700;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6);
+	position:relative;
+	width:100%;
+	height:2vh;
+	font-family:'Yantramanav',sans-serif;
+	font-size:0.35vh;
+	font-weight:700;
+	text-shadow:0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6);
 }
-
 .bearing {
-    position: relative;
-    width: 100%;
-    top: -0.5vh;
-    height: 3.5vh;
-    padding-left: 0.12vw;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2.3vh;
-    letter-spacing: 0.7px;
-    text-decoration: none;
-    font-style: normal;
-    font-variant: small-caps;
-    text-transform: none;
-    font-weight: 600;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6), 0 0 1px rgba(0, 0, 0, 0.6);
+	position:relative;
+	width:100%;
+	top:-0.5vh;
+	height:3.5vh;
+	padding-left:0.12vw;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:2.3vh;
+	letter-spacing:0.7px;
+	text-decoration:none;
+	font-style:normal;
+	font-variant:small-caps;
+	text-transform:none;
+	font-weight:600;
+	text-shadow:0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6);
 }
-
