@@ -24,6 +24,8 @@ local showSquareB = false
 local CinematicHeight = 0.2
 local w = 0
 local hasWeapon = false
+local isEditMode = false
+local wasRadarShowing = false
 
 DisplayRadar(false)
 
@@ -1147,3 +1149,97 @@ RegisterNetEvent('qbx_hud:client:hideHud', function()
         })
     end
 end)
+
+-- Function to toggle edit mode
+function toggleEditMode()
+    isEditMode = not isEditMode
+
+    if isEditMode then
+        -- Store radar state and force it on during edit mode
+        wasRadarShowing = not IsRadarHidden()
+        DisplayRadar(true)
+        
+        -- Show cursor and disable game controls
+        SetNuiFocus(true, true)
+        SetNuiFocusKeepInput(true)
+        
+        -- Optional: Disable some game controls while keeping others
+        CreateThread(function()
+            while isEditMode do
+                DisableControlAction(0, 1, true) -- Look left/right
+                DisableControlAction(0, 2, true) -- Look up/down
+                DisableControlAction(0, 24, true) -- Attack
+                DisableControlAction(0, 25, true) -- Aim
+                DisableControlAction(0, 257, true) -- Attack 2
+                
+                -- Allow some controls like movement
+                EnableControlAction(0, 30, true) -- Move Left/Right
+                EnableControlAction(0, 31, true) -- Move Up/Down
+                EnableControlAction(0, 32, true) -- W
+                EnableControlAction(0, 33, true) -- S
+                EnableControlAction(0, 34, true) -- A
+                EnableControlAction(0, 35, true) -- D
+                
+                Wait(0)
+            end
+        end)
+        
+        -- Send NUI message to enter edit mode
+        SendNUIMessage({
+            action = 'editMode',
+            toggle = true
+        })
+        
+        exports.qbx_core:Notify('HUD Edit Mode Activated\nPress ENTER to save or ESC to cancel', 'primary')
+    else
+        -- Restore previous radar state
+        DisplayRadar(wasRadarShowing)
+        
+        -- Hide cursor and re-enable game controls
+        SetNuiFocus(false, false)
+        SetNuiFocusKeepInput(false)
+        
+        -- Send NUI message to exit edit mode
+        SendNUIMessage({
+            action = 'editMode',
+            toggle = false
+        })
+    end
+end
+
+-- Modify the key press handling
+CreateThread(function()
+    while true do
+        Wait(0)
+        if isEditMode then
+            if IsControlJustPressed(0, 191) then -- Enter key
+                -- Save changes
+                SendNUIMessage({
+                    action = 'saveEditMode'
+                })
+                exports.qbx_core:Notify('HUD changes saved', 'success')
+                toggleEditMode()
+            elseif IsControlJustPressed(0, 322) then -- Esc key
+                -- Cancel changes
+                SendNUIMessage({
+                    action = 'cancelEditMode'
+                })
+                exports.qbx_core:Notify('HUD changes cancelled', 'error')
+                toggleEditMode()
+            end
+        end
+    end
+end)
+
+-- Add NUI Callback for saving positions
+RegisterNUICallback('saveHudPositions', function(positions, cb)
+    -- Here you can save the positions to your storage method
+    -- For example, you might want to save to KVP:
+    SetResourceKvp('hudPositions', json.encode(positions))
+    cb('ok')
+end)
+
+-- Command registration remains the same
+RegisterCommand('edithud', function()
+    toggleEditMode()
+end, false)
