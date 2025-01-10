@@ -377,8 +377,8 @@ speed:after {
 .voice-container {
 	position:fixed;
 	/* Fixed position */
-    bottom:225px;
-	left:343px;
+    bottom:160px;
+	left:440px;
 	width:auto;
 	height:auto;
 	background:linear-gradient(180deg,rgba(0,131,25,0.396796218487395) 20%,rgba(40,176,0,0.396796218487395) 59%);
@@ -655,4 +655,82 @@ speed:after {
 	text-transform:none;
 	font-weight:600;
 	text-shadow:0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6),0 0 1px rgba(0,0,0,0.6);
+}
+/* Add stress position and bar styles */
+.stress-pos {
+    bottom: 160px;
+    left: 485px;
+}
+
+.s-b {
+    background: linear-gradient(180deg, rgba(131, 0, 0, 0.397) 20%, rgba(176, 0, 0, 0.397) 59%);
+    height: 100%;
+    border-radius: 3.5px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Add oxygen bar styles */
+.oxygen-container {
+    position: fixed;
+    bottom: 90px;
+    left: 355px;
+    height: 8px;
+    width: 210px;
+    background-color: #33333350;
+    box-shadow: 0px 0px 150px rgb(255,255,255);
+    border-radius: 3.5px;
+}
+
+.oxygen-bar {
+    height: 100%;
+    border-radius: 3.5px;
+    position: absolute;
+    bottom: 0;
+}
+
+.o-b {
+    background: linear-gradient(90deg, rgba(0, 140, 255, 0.397) 20%, rgba(28, 123, 255, 0.397) 59%);
+}
+
+.oxygen-text {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: -15px;
+    right: 3px;
+}
+
+.oxygen-icon {
+    size: 7px;
+    color: #fff;
+    top: -17px;
+    left: 210px;
+    position: absolute;
+    border-radius: 8px;
+    padding: 8px;
+    background: linear-gradient(180deg, rgba(0, 140, 255, 0.397) 20%, rgba(28, 123, 255, 0.397) 59%);
+}
+
+/* Add armed icon styles */
+.armed-container {
+    position: fixed;
+    bottom: 210px;
+    left: 445px;
+    width: auto;
+    height: auto;
+    background: linear-gradient(180deg, rgba(0,131,25,0.396796218487395) 20%, rgba(40,176,0,0.396796218487395) 59%);
+    box-shadow: 0px 0px 150px rgb(255,255,255);
+    border-radius: 6px;
+}
+
+.armed-icon {
+    padding: 7px;
+    color: #fff !important;
+    font-size: 15px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

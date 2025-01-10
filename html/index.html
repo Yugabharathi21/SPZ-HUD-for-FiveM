@@ -10,6 +10,7 @@
 		rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css"
 		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
 		</script>
 		<script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"
@@ -399,35 +400,31 @@
 					</div>
 				</transition>
 				<transition name="fade">
-					<div v-if="showStress">
-						<q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static"
-						size="50px" :thickness="0.24" color="stress" :min="0" :max="100">
-						</q-circular-progress>
-						<q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="stress"
-						size="50px" :thickness="0.24" color="stress" :min="0" :max="100" center-color="grey-10">
-							<q-icon style="top: -0.5px; left: -0.5px;" name="fas fa-brain" size="19.5px"
-							color="white" />
+					<div v-if="showStress" class="food-container stress-pos">
+						<div class="food-bar s-b" :style="{ height: stress + '%'}">
+						</div>
+						<div class="food-text" :style="{transform: 'rotate(0deg)' }">
+							{{ stress }}%
+						</div>
+						<q-icon class="food-icon" name="fas fa-brain">
+						</q-icon>
 					</div>
 				</transition>
 				<transition name="fade">
-					<div v-if="showOxygen">
-						<q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static"
-						size="50px" :thickness="0.24" color="oxygen" :min="0" :max="100">
-						</q-circular-progress>
-						<q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="oxygen"
-						size="50px" :thickness="0.24" color="oxygen" :min="0" :max="100" center-color="grey-10">
-							<q-icon style="top: -2px; left: -0.1px;" name="fas fa-lungs" size="19.5px"
-							color="white" />
+					<div v-if="showOxygen" class="oxygen-container">
+						<div class="oxygen-bar o-b" :style="{ width: oxygen + '%'}">
+						</div>
+						<div class="oxygen-text">
+							{{ oxygen }}%
+						</div>
+						<q-icon class="oxygen-icon" name="fas fa-lungs">
+						</q-icon>
 					</div>
 				</transition>
 				<transition name="fade">
-					<div v-if="showArmed">
-						<q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static"
-						size="50px" :thickness="0.24" color="armed" :min="0" :max="100">
-						</q-circular-progress>
-						<q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="static"
-						size="50px" :thickness="0.24" color="armed" :min="0" :max="100" center-color="grey-10">
-							<q-icon name="fas fa-stream" size="19.5px" color="white" />
+					<div v-if="showArmed" class="armed-container">
+						<q-icon class="armed-icon" name="fas fa-crosshairs">
+						</q-icon>
 					</div>
 				</transition>
 				<transition name="fade">
