@@ -107,3 +107,19 @@
       bottom: 6% !important;
   }
 }
+
+/* Draggable elements */
+.draggable {
+  position: absolute;
+  cursor: default;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s, cursor 0.3s;
+}
+
+.draggable.edit-mode {
+  cursor: move;
+  background-color: #e0e0ff;
+}
