@@ -1190,3 +1190,14 @@ const baseplateHud = {
 const app4 = Vue.createApp(baseplateHud);
 app4.use(Quasar);
 app4.mount("#baseplate-container");
+
+
+
+ // Listen for messages from the Lua script
+ window.addEventListener('message', (event) => {
+    const data = event.data;
+
+    if (data.action === 'updateVoiceMode') {
+        document.getElementById('voice-mode').innerText = `Voice Mode: ${data.mode}`;
+    }
+ });
