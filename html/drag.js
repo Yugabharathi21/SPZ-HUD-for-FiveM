@@ -5,27 +5,19 @@ window.addEventListener('message', function(event) {
     if (event.data.action === 'editMode') {
         editMode = event.data.toggle;
         if (editMode) {
-            // Store original positions
+            // Store original positions and enable dragging
             $('.draggable').each(function() {
                 const id = $(this).attr('id');
                 originalPositions[id] = {
                     left: $(this).css('left'),
                     top: $(this).css('top')
                 };
-            });
-            
-            // Make elements draggable
-            $('.draggable').draggable('enable');
-            $('.draggable').css('cursor', 'move');
-            
-            // Show positioning helper
-            $('.draggable').append('<div class="edit-overlay">Drag to move</div>');
+            }).draggable('enable').css('cursor', 'move')
+              .append('<div class="edit-overlay">Drag to move</div>');
         } else {
-            // Disable dragging
-            $('.draggable').draggable('disable');
-            $('.draggable').css('cursor', 'default');
-            
-            // Remove positioning helper
+            // Disable dragging and cleanup
+            $('.draggable').draggable('disable')
+                          .css('cursor', 'default');
             $('.edit-overlay').remove();
         }
     } else if (event.data.action === 'saveEditMode') {
@@ -39,30 +31,29 @@ window.addEventListener('message', function(event) {
             };
         });
         
-        // Send positions back to Lua
         $.post('https://qbx_hud/saveHudPositions', JSON.stringify(positions));
         
-        // Disable dragging
-        $('.draggable').draggable('disable');
-        $('.draggable').css('cursor', 'default');
+        // Cleanup
+        $('.draggable').draggable('disable')
+                      .css('cursor', 'default');
         $('.edit-overlay').remove();
     } else if (event.data.action === 'cancelEditMode') {
         // Restore original positions
-        for (const [id, pos] of Object.entries(originalPositions)) {
+        Object.entries(originalPositions).forEach(([id, pos]) => {
             $(`#${id}`).css(pos);
-        }
+        });
         
-        // Disable dragging
-        $('.draggable').draggable('disable');
-        $('.draggable').css('cursor', 'default');
+        // Cleanup
+        $('.draggable').draggable('disable')
+                      .css('cursor', 'default');
         $('.edit-overlay').remove();
     }
 });
 
-// Initialize draggable elements (disabled by default)
+// Initialize draggable elements
 $(document).ready(function() {
     $('.draggable').draggable({
         disabled: true,
         containment: "window"
     });
-}); 
+});

@@ -22,6 +22,7 @@
 		</script>
       <script src="darg.js" defer>
 		</script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 	</head>
 	<body>
 		<div id="openmenu">
@@ -286,7 +287,7 @@
 				</q-splitter>
 			</div>
 		</div>
-		<div id="baseplate-container" v-show="show">
+		<div id="baseplate-container" v-show="show" class="draggable">
 			<div v-if="showStreets" class="street-container">
 				<div class="street">
 					{{ street1 }}
@@ -304,7 +305,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="money-container">
+		<div id="money-container" class="draggable">
 			<div id="money-cash">
 				<transition name="slide-fade">
 					<p v-if="showCash">
@@ -349,7 +350,7 @@
 			</div>
 		</div>
 		<div id="ui-container">
-			<div id="playerHud" v-show="show">
+			<div id="playerHud" v-show="show" class="draggable">
 				<transition name="fade">
 					<div v-if="showVoice" class="voice-container">
 						<q-icon :name="voiceIcon" size="19.5px" class="voice" :style="{color: talkingColor}"
