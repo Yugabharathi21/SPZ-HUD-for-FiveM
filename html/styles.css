@@ -11,112 +11,140 @@
     font-weight: normal;
     font-style: normal;
 }
+
 /* Menu */
 div#openmenu {
-	display:none;
-	position:absolute;
-	width:50%;
-	top:45%;
-	left:50%;
-	transform:translate(-50%,-50%);
+    display: none;
+    position: absolute;
+    width: 50%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
 .brand-logo {
-	width:25%;
+    width: 25%;
 }
+
 /* when using an svg all you need to change is the width and it will resize it */
 
 /* Menu tab & panel styles */
 .text-tabcolor {
-	color:rgb(255,255,255) !important;
+    color: rgb(255, 255, 255) !important;
 }
+
 .bg-active-tab {
-	background:rgb(23 23 23) !important;
+    background: rgb(23 23 23) !important;
 }
+
 .bg-panel {
-	background:rgb(30 30 30) !important;
+    background: rgb(30 30 30) !important;
 }
+
 .q-tab-panels {
-	border-top-right-radius:12px !important;
-	border-bottom-right-radius:12px !important;
+    border-top-right-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
 }
+
 /* change all 12px for a different border radius (rounds edges of the menu) */
 .q-splitter__panel.q-splitter__before {
-	border-top-left-radius:12px !important;
-	border-bottom-left-radius:12px !important;
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
 }
+
 /* change all 12px for a different border radius (rounds edges of the menu) */
 .q-tabs--vertical.q-tabs--not-scrollable .q-tabs__content {
-	border-top-left-radius:12px !important;
-	border-bottom-left-radius:12px !important;
+    border-top-left-radius: 12px !important;
+    border-bottom-left-radius: 12px !important;
 }
+
 /* change all 12px for a different border radius (rounds edges of the menu) */
 
 /* Menu text styles */
 .text-h6 {
-	color:rgb(255,255,255) !important;
+    color: rgb(255, 255, 255) !important;
 }
+
 .text-h7 {
-	color:rgba(255,255,255,0.8) !important;
+    color: rgba(255, 255, 255, 0.8) !important;
 }
+
 /* Menu buttons & checkboxes & toggle switch icons styles */
 .text-textbutton {
-	color:rgb(0,0,0) !important;
+    color: rgb(0, 0, 0) !important;
 }
+
 .bg-bgbutton {
-	background:rgb(140,0,255) !important;
+    background: rgb(140, 0, 255) !important;
 }
+
 .q-checkbox__inner {
-	color:rgb(255 255 255 / 70%) !important;
+    color: rgb(255 255 255 / 70%) !important;
 }
+
 .text-checkbox {
-	color:rgba(183,0,255,0.651) !important;
+    color: rgba(183, 0, 255, 0.651) !important;
 }
+
 .q-checkbox__svg {
-	color:rgb(0,0,0) !important;
+    color: rgb(0, 0, 0) !important;
 }
+
 .q-checkbox__inner--truthy .q-checkbox__bg {
-	box-shadow:0px 0px 3px 3px rgb(220 20 60 / 15%) !important;
+    box-shadow: 0px 0px 3px 3px rgb(220 20 60 / 15%) !important;
 }
+
 /* if you want the checkboxes to have a glow/shadow */
 .text-toggleicons {
-	color:rgb(0,0,0) !important;
+    color: rgb(0, 0, 0) !important;
 }
+
 /* Menu misc */
 hr {
-	opacity:0.1 !important;
+    opacity: 0.1 !important;
 }
+
 /* horizontal line that seperates sections */
 .q-mb-md {
-	margin-bottom:0px !important;
+    margin-bottom: 0px !important;
 }
+
 /* removes extra top padding */
 .q-mb-md-d {
-	padding-left:10px !important;
-	padding-bottom:10px !important;
+    padding-left: 10px !important;
+    padding-bottom: 10px !important;
 }
+
 /* keeps q-items aligned */
 .q-item {
-	padding:8px 0px !important;
+    padding: 8px 0px !important;
 }
+
 /* keeps q-items aligned */
 .q-item__section--avatar {
-	min-width:40px !important
+    min-width: 40px !important
 }
+
 /* keeps q-items aligned */
 .q-item__section--side {
-	padding-right:0px !important;
+    padding-right: 0px !important;
 }
+
 /* keeps q-items aligned */
 .q-splitter--vertical>.q-splitter__separator {
-	width:0px !important;
+    width: 0px !important;
 }
+
 /* keeps navigation tab panel seamless */
 div#q-loading-bar {
-	display:none !important;
+    display: none !important;
 }
-/* makes sure there's no ajax load from quasar */::-webkit-scrollbar {
-	display:none !important;
+
+/* makes sure there's no ajax load from quasar */
+::-webkit-scrollbar {
+    display: none !important;
 }
+
 /* makes sure there's no ugly scrollbar on menu*/
 
 /* Hud radial styles */
@@ -680,12 +708,12 @@ speed:after {
     width: 210px;
     background-color: #33333350;
     box-shadow: 0px 0px 150px rgb(255,255,255);
-    border-radius: 3.5px;
+    border-radius: 1px;
 }
 
 .oxygen-bar {
-    height: 100%;
-    border-radius: 3.5px;
+    height: 19px;
+    border-radius: 1px;
     position: absolute;
     bottom: 0;
 }
@@ -699,20 +727,17 @@ speed:after {
     font-size: 12px;
     font-weight: bold;
     position: absolute;
-    top: -15px;
+    top: -9px;
     right: 3px;
 }
 
 .oxygen-icon {
-    size: 7px;
+    size: 2.5px;
     color: #fff;
-    top: -17px;
-    left: 210px;
+    top: -9px;
+    left: 3px;
     position: absolute;
-    border-radius: 8px;
-    padding: 8px;
-    background: linear-gradient(180deg, rgba(0, 140, 255, 0.397) 20%, rgba(28, 123, 255, 0.397) 59%);
-}
+	}
 
 /* Add armed icon styles */
 .armed-container {
@@ -733,4 +758,18 @@ speed:after {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Add harness styles */
+.harness-container {
+    bottom: 155px;
+    right: 40px;  /* Position it to the right of seatbelt */
+    position: absolute;
+}
+
+.harness-icon {
+    size: 14px;
+    padding: 10px;
+    background: linear-gradient(180deg, rgba(0,131,25,0.396796218487395) 20%, rgba(40,176,0,0.396796218487395) 59%);
+    border-radius: 8px;
 }

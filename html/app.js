@@ -997,6 +997,7 @@ const vehHud = {
             showSquare: false,
             showCircle: false,
             seatbeltColor: "",
+            showHarness: false,
         };
     },
 
@@ -1020,12 +1021,19 @@ const vehHud = {
             this.showAltitude = data.showAltitude;
             this.showSquareB = data.showSquareB;
             this.showCircleB = data.showCircleB;
+            this.showHarness = data.showHarness;
+            this.harness = data.harness;
 
             if (data.seatbelt === true) {
                 this.seatbelt = 1;
                 this.seatbeltColor = "white";
+            } else if (data.harness === true) {
+                this.seatbelt = 1;
+                this.showSeatbelt = true;
+                this.seatbeltColor = "blue";
             } else {
                 this.seatbelt = 0;
+                this.showSeatbelt = false;
                 this.seatbeltColor = "#FF5100";
             }
 

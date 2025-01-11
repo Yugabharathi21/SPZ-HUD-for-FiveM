@@ -449,16 +449,6 @@
 					</div>
 				</transition>
 				<transition name="fade">
-					<div v-if="showHarness">
-						<q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static"
-						size="50px" :thickness="0.24" color="harness" :min="0" :max="100">
-						</q-circular-progress>
-						<q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="hp"
-						size="50px" :thickness="0.24" color="harness" :min="0" :max="100" center-color="grey-10">
-							<q-icon name="fas fa-user-slash" size="19.5px" color="white" />
-					</div>
-				</transition>
-				<transition name="fade">
 					<div v-if="showCruise">
 						<q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static"
 						size="50px" :thickness="0.24" color="cruise" :min="0" :max="100">
@@ -527,9 +517,16 @@
 					</div>
 				</div>
 				<transition name="fade">
-					<div class="seatbelt-container">
+					<div class="seatbelt-container" v-if="showSeatbelt && !showHarness">
 						<q-icon name="fas fa-user-slash" class="seatbelt-icon" :value="seatbelt"
 						:style="{color: seatbeltColor}">
+						</q-icon>
+					</div>
+				</transition>
+				<transition name="fade">
+					<div class="harness-container" v-if="showHarness">
+						<q-icon name="fas fa-user-slash" class="harness-icon"
+						:style="{color: '#326dbf'}">
 						</q-icon>
 					</div>
 				</transition>

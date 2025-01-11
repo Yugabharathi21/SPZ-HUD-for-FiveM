@@ -581,6 +581,7 @@ local function updateVehicleHud(data)
             showSeatbelt = data[8],
             showSquareB = data[9],
             showCircleB = data[10],
+            showHarness = data[11],
         })
     end
 end
@@ -714,7 +715,7 @@ CreateThread(function()
                     dev,
                 })
                 updateVehicleHud({
-                    show,
+                    true,
                     IsPauseMenuActive(),
                     LocalPlayer.state?.seatbelt,
                     math.ceil(GetEntitySpeed(cache.vehicle) * speedMultiplier),
@@ -724,6 +725,7 @@ CreateThread(function()
                     showSeatbelt,
                     showSquareB,
                     showCircleB,
+                    LocalPlayer.state?.harness,
                 })
                 showAltitude = false
                 showSeatbelt = true
@@ -1134,6 +1136,7 @@ RegisterNetEvent('qbx_hud:client:showHud', function()
             showSeatbelt,
             showSquareB,
             showCircleB,
+            LocalPlayer.state?.harness,
         })
     end
 end)
