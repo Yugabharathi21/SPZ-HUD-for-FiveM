@@ -455,7 +455,6 @@ const app = Vue.createApp({
                 eval(`this.${event.data.event} = "${event.data.toggle}"`)
             }
             if (event.data.action === 'updateAmmo') {
-                console.log("Ammo Count Received:", event.data.ammoCount);
                 this.updateAmmoCount(event.data.ammoCount);
             }
         });
