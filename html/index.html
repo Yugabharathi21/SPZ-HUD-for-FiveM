@@ -452,28 +452,6 @@
 					</div>
 				</transition>
 				<transition name="fade">
-					<div v-if="showCruise">
-						<q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static"
-						size="50px" :thickness="0.24" color="cruise" :min="0" :max="100">
-						</q-circular-progress>
-						<q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="speed"
-						size="50px" :thickness="0.24" color="cruise" :min="0" :max="100" center-color="grey-10">
-							<q-icon style="top: -1.5px;" name="fas fa-tachometer-alt-fast" size="19.5px"
-							color="white" />
-					</div>
-				</transition>
-				<transition name="fade">
-					<div v-if="showNos">
-						<q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static"
-						size="50px" :thickness="0.24" color="nos" :min="0" :max="100">
-						</q-circular-progress>
-						<q-circular-progress class="q-ml-xl" style="left: -50%;" show-value :value="nos"
-						size="50px" :thickness="0.24" color="nos" :min="0" :max="100" center-color="grey-10">
-							<q-icon name="fas fa-meteor" size="19.5px" :style="{color: nosColor}"
-							/>
-					</div>
-				</transition>
-				<transition name="fade">
 					<div v-if="showDev">
 						<q-circular-progress class="q-ml-xl" style="opacity: 40%;" :value="static"
 						size="50px" :thickness="0.24" color="dev" :min="0" :max="100">
@@ -489,7 +467,7 @@
 			<div class="hud-container">
 			<div v-show="show">
 				<div class="speeddail" id="speedometer">
-					<div class="speed">
+					<div class="speed" id="speed">
 						{{ speed }}
 					</div>
 				</div>

@@ -600,6 +600,23 @@ local function getFuelLevel(vehicle)
     return lastFuelCheck
 end
 
+-- Function to update the speedometer display
+function updateSpeedometer(speed)
+    local speedTextColor = cruiseOn and "#004d0044" or "#ffffff42" -- Yellow if cruise is on, otherwise semi-transparent white
+
+    SendNUIMessage({
+        action = 'updateSpeedometer',
+        speed = speed,
+        color = speedTextColor -- Send the color to the frontend
+    })
+end
+
+-- Example of how to toggle cruise on/off
+RegisterCommand('toggleCruise', function()
+    cruiseOn = not cruiseOn -- Toggle cruise state
+    updateSpeedometer(currentSpeed) -- Update speedometer with current speed
+end)
+
 -- HUD Update loop
 
 CreateThread(function()
@@ -1180,5 +1197,14 @@ Citizen.CreateThread(function()
     while true do
         Citizen.Wait(200) -- Check every 2 m seconds (adjust as needed)
         updateAmmoCount() -- Update ammo count periodically
+    end
+end)
+
+-- Update speedometer in the HUD Update loop
+CreateThread(function()
+    while true do
+        Citizen.Wait(100) -- Adjust the wait time as needed
+        local currentSpeed = math.ceil(GetEntitySpeed(cache.vehicle) * speedMultiplier) -- Get current speed
+        updateSpeedometer(currentSpeed) -- Update speedometer with current speed
     end
 end)

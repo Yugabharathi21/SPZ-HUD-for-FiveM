@@ -448,6 +448,10 @@ const app = Vue.createApp({
             this.ammoCount = newCount;
             document.getElementById("ammoCount").innerText = `${newCount}`;
         },
+        updateSpeedometer(speed, color) {
+            document.getElementById("speedometer").innerText = `${speed}`;
+            document.getElementById("speedometer").style.color = color;
+        },
     },
     mounted() {
         this.listener = window.addEventListener("message", (event) => {
@@ -456,6 +460,9 @@ const app = Vue.createApp({
             }
             if (event.data.action === 'updateAmmo') {
                 this.updateAmmoCount(event.data.ammoCount);
+            }
+            if (event.data.action === 'updateSpeedometer') {
+                this.updateSpeedometer(event.data.speed, event.data.color);
             }
         });
     },
