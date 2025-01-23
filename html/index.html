@@ -423,8 +423,11 @@
 				</transition>
 				<transition name="fade">
 					<div v-if="showArmed" class="armed-container">
-						<q-icon class="armed-icon" name="fas fa-crosshairs">
-						</q-icon>
+						<q-icon class="armed-icon" name="fas fa-crosshairs"></q-icon>
+						|
+						<span class="ammo-text" id="ammoCount"></span>
+						|
+						<q-icon class="armed-icon" name="fas fa-Gun"></q-icon>
 					</div>
 				</transition>
 				<transition name="fade">
@@ -484,12 +487,6 @@
 		</div>
 		<div id="veh-container">
 			<div class="hud-container">
-				<div id="waypointArrow" class="waypoint-arrow">
-				</div>
-				<div id="waypointDistance" class="distance-display">
-					500m
-				</div>
-			</div>
 			<div v-show="show">
 				<div class="speeddail" id="speedometer">
 					<div class="speed">

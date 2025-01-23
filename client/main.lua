@@ -24,6 +24,7 @@ local showSquareB = false
 local CinematicHeight = 0.2
 local w = 0
 local hasWeapon = false
+local ammoCount = 30 -- Initialize ammo count (example value)
 
 DisplayRadar(false)
 
@@ -79,6 +80,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     hunger = QBX.PlayerData.metadata.hunger
     thirst = QBX.PlayerData.metadata.thirst
     hp = QBX.PlayerData.metadata.health
+    updateAmmoCount()
 end)
 
 AddEventHandler('onResourceStart', function(resourceName)
@@ -1148,5 +1150,35 @@ RegisterNetEvent('qbx_hud:client:hideHud', function()
             action = 'car',
             show = false,
         })
+    end
+end)
+
+-- Function to update ammo count
+local function updateAmmoCount()
+    local playerPed = PlayerPedId() -- Get the player's Ped ID
+    local weaponHash = GetSelectedPedWeapon(playerPed) -- Get the currently equipped weapon
+    local ammoCount = GetAmmoInPedWeapon(playerPed, weaponHash) -- Fetch the ammo count
+
+    -- Send the updated ammo count to the frontend
+    SendNUIMessage({
+        action = 'updateAmmo',
+        ammoCount = ammoCount,
+    })
+end
+
+-- Call this function whenever the player switches weapons or reloads
+AddEventHandler('weapon:client:fire', function()
+    updateAmmoCount() -- Update ammo count after firing
+end)
+
+AddEventHandler('weapon:client:reload', function()
+    updateAmmoCount() -- Update ammo count after reloading
+end)
+
+-- Optional: Periodically update ammo count while the player is in the game
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(200) -- Check every 2 m seconds (adjust as needed)
+        updateAmmoCount() -- Update ammo count periodically
     end
 end)

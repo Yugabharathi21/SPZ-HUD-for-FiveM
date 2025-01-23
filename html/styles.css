@@ -241,7 +241,7 @@ div#q-loading-bar {
 }
 @keyframes glow-text {
 	0%,100% {
-	text-shadow:0 0 5px #ffffff,0 0 10px rgba(0,255,128,0.8);
+ text-shadow:0 0 5px #ffffff,0 0 10px rgba(0,255,128,0.8);
 }
 50% {
 	text-shadow:0 0 10px #ffffff,0 0 20px rgba(0,255,128,1);
@@ -742,17 +742,18 @@ speed:after {
 /* Add armed icon styles */
 .armed-container {
     position: fixed;
-    bottom: 210px;
-    left: 445px;
+    bottom: 218px;
+    left: 400px;
     width: auto;
     height: auto;
     background: linear-gradient(180deg, rgba(0,131,25,0.396796218487395) 20%, rgba(40,176,0,0.396796218487395) 59%);
     box-shadow: 0px 0px 150px rgb(255,255,255);
     border-radius: 6px;
+	padding: 2px 2px;
 }
 
 .armed-icon {
-    padding: 7px;
+    padding: 7px 8px;
     color: #fff !important;
     font-size: 15px !important;
     display: flex;
@@ -772,4 +773,12 @@ speed:after {
     padding: 10px;
     background: linear-gradient(180deg, rgba(0,131,25,0.396796218487395) 20%, rgba(40,176,0,0.396796218487395) 59%);
     border-radius: 8px;
+}
+
+.ammo-text {
+    color: white; /* Ensure text is white for contrast */
+    font-size: 14px; /* Adjust font size as needed */
+    font-weight: bold;
+	padding: 2px 8px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.8); /* Stronger shadow for better visibility */
 }

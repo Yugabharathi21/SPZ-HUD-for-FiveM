@@ -27,6 +27,7 @@ const app = Vue.createApp({
             isPointerShowChecked: this.initIsPointerShowChecked(),
             isDegreesShowChecked: this.initIsDegreesShowChecked(),
             isCineamticModeChecked: this.initIsCineamticModeChecked(),
+            ammoCount: 0,
         };
     },
     setup() {
@@ -442,11 +443,20 @@ const app = Vue.createApp({
             targetId = event.currentTarget.id;
             cinematicMode()
         },
+        updateAmmoCount(newCount) {
+            console.log("Ammo Count Updated:", newCount);
+            this.ammoCount = newCount;
+            document.getElementById("ammoCount").innerText = `${newCount}`;
+        },
     },
     mounted() {
         this.listener = window.addEventListener("message", (event) => {
             if (event.data.event === 'isToggleMapShapeChecked' || event.data.event === 'isChangeFPSChecked') {
                 eval(`this.${event.data.event} = "${event.data.toggle}"`)
+            }
+            if (event.data.action === 'updateAmmo') {
+                console.log("Ammo Count Received:", event.data.ammoCount);
+                this.updateAmmoCount(event.data.ammoCount);
             }
         });
     },
