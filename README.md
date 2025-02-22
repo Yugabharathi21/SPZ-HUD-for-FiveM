@@ -1,75 +1,71 @@
+SPZ-HUD for FiveM
+SPZ-HUD is a redesigned fork of the Qbox HUD (Qbx_HUD), featuring a next-generation user interface with an emphasis on aesthetics, functionality, and immersion. This reimagined HUD enhances the gaming experience while maintaining compatibility with Qbox.
 
-# SPZ-HUD-for-FiveM
-This repository is a fork of the Qbox HUD (Qbx_HUD) project, featuring a fully redesigned frontend for a next-generation user interface. The HUD has been reimagined with a focus on enhancing both aesthetics and functionality, ensuring a more immersive and modern experience for users.
-
-Key Improvements:
-Fuel Gauge Revamp: Redesigned with smooth rotational alignment and real-time percentage display for clarity.
-Enhanced UI/UX: Minimalistic, professional design with optimized responsiveness and accessibility.
-Customizable Elements: Refined styles tailored for roleplay setups, seamlessly integrated with the original Qbox backend.
-Forward Compatibility: Polished frontend updates without disrupting existing functionalities.
-This project bridges functionality and visual excellence, setting a new standard for gaming and roleplay HUDs.
-=======
-![title](https://cdn.discordapp.com/attachments/1027004645912088686/1300262386011476019/hud.jpg?ex=67203336&is=671ee1b6&hm=19669587a83114d4410f36a00714c6b553693688ae5788517dd80ce8461979bc&)
-
-# qbx_hud
-
-Shows UI elements such as health, hunger, thirst, etc.
-
-## Features
-
-### Player HUDs
-- Hunger
-- Thirst
-- Health
-- Voice Volume
-- Armor
-- Stamina
-- Stress
-- Oxygen
-- Parachute
-- Radio
-- Money
-
-### Vehicle HUDs
-- Altitude
-- Speed
-- Nitro
-- Harness Health
-- Seatbelt Status
-- Engine Health
-- Fuel
-
-  requirements
-  qbx-core
-
-### Settings Menu
-Each player can customize the look and feel of their own HUD through a settings menu.
-The **default key** is **"I"**, but each player can rebind this. One can also open the settings menu using **"/menu"**
-
-## Previews
-![image](https://github.com/user-attachments/assets/019bf0b0-4464-4b51-a313-8ae1449ddc9c)
-
-![Screenshot 2025-02-22 063955](https://github.com/user-attachments/assets/8e7cf7a0-1b3e-4a0f-a508-19fb39933c9c)
-
-![Screenshot 2025-02-22 063927](https://github.com/user-attachments/assets/0f198912-1383-4dfb-aae6-3b2e7f63088e)
-
-![image](https://github.com/user-attachments/assets/635c71ff-cddc-4474-bc1b-a451ab442be9)
-
-Curse Control
-![image](https://github.com/user-attachments/assets/a788b3a4-7701-426c-befd-4abf5370de30)
-
-Harness Enabled
-![image](https://github.com/user-attachments/assets/d1e655d4-4881-4796-8f2c-7f95c7e7b4a4)
-
-altitude meter
-![image](https://github.com/user-attachments/assets/b163f914-8082-4516-b95f-c43a12fb0458)
-
-![image](https://github.com/user-attachments/assets/a01c3975-f569-4531-bfb3-1b287d03f421)
+✨ Key Improvements
+Revamped Fuel Gauge – Redesigned with smooth rotational alignment and real-time percentage display for better clarity.
+Enhanced UI/UX – A minimalistic and professional design with improved responsiveness and accessibility.
+Customizable Elements – Refined styles tailored for roleplay setups, seamlessly integrated with the original Qbox backend.
+Forward Compatibility – Polished frontend updates without disrupting existing functionalities.
+This project bridges functionality with visual excellence, setting a new standard for FiveM roleplay HUDs.
 
 
-WIP
-* Dragable compoents
-* switching to react (Vite Js)
-* Make altitude meter more professtional
-* add more varients
-* adding to other cores (ox,qb,esx)
+
+📌 Features
+🏃‍♂️ Player HUD
+Vitals: Health, Hunger, Thirst, Armor, Stamina, Stress, Oxygen
+Audio & Communication: Voice Volume, Radio
+Other Indicators: Parachute, Money
+🚗 Vehicle HUD
+Performance: Speed, Engine Health, Fuel, Nitro, Harness Health
+Safety: Seatbelt Status
+Navigation: Altitude Meter
+⚙️ Customization
+Players can customize the HUD through an in-game settings menu.
+
+Default key: "I"
+Command: /menu
+Each player can personalize their HUD layout, visibility, and UI preferences.
+
+📸 Previews
+
+![Screenshot 2025-02-22 063955](https://github.com/user-attachments/assets/5fc102b8-0b4f-4961-bf4c-2f33c5a166a2)
+
+![Screenshot 2025-02-22 063927](https://github.com/user-attachments/assets/a7dec20d-7176-4e62-897c-9be216f17da4)
+
+![Screenshot 2025-02-22 064007](https://github.com/user-attachments/assets/40127203-7670-4731-a966-1be8555c2afc)
+
+![Screenshot 2025-02-22 064139](https://github.com/user-attachments/assets/daefc921-38a7-4745-af8b-b76e0017d6b6)
+
+![Screenshot 2025-02-22 064551](https://github.com/user-attachments/assets/9775a045-ff6b-4112-89b9-4eba903d9c8f)
+
+
+🎯 Additional Features
+Weapon HUD with Ammo Count
+
+![Screenshot 2025-02-22 065157](https://github.com/user-attachments/assets/5ac4e8d3-feea-4b1b-b2eb-24221376c2e6)
+
+Cruise Control
+
+![Screenshot 2025-02-22 064237](https://github.com/user-attachments/assets/365b633a-6e35-4e5f-98fe-de6c14126bda)
+
+difference in Harness indicaation
+
+![Screenshot 2025-02-22 064327](https://github.com/user-attachments/assets/734de942-b54c-4c9a-ad0d-7c7ab7a03e75)
+
+Altitude Meter
+
+![Screenshot 2025-02-22 064428](https://github.com/user-attachments/assets/90d6e296-a7a3-4cd9-8467-1fe1ea539025)
+
+Real-Time Money Transactions (Cash & Bank)
+
+![Screenshot 2025-02-22 065246](https://github.com/user-attachments/assets/e861aa9b-290d-43fd-98d7-8aed9d16e00f)
+
+🚧 Work in Progress (WIP)
+Draggable Components for a more personalized HUD experience.
+Switching to React (Vite.js) for improved performance and maintainability.
+Professional Altitude Meter Design.
+Additional Variants for more customization options.
+Expanding Compatibility to support other frameworks (OX, QB, ESX).
+
+📌 Requirements
+Qbox Core (qbx-core)
