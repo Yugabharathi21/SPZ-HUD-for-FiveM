@@ -2,25 +2,25 @@ SPZ-HUD for FiveM
 SPZ-HUD is a redesigned fork of the Qbox HUD (Qbx_HUD), featuring a next-generation user interface with an emphasis on aesthetics, functionality, and immersion. This reimagined HUD enhances the gaming experience while maintaining compatibility with Qbox.
 
 ✨ Key Improvements
-Revamped Fuel Gauge – Redesigned with smooth rotational alignment and real-time percentage display for better clarity.
-Enhanced UI/UX – A minimalistic and professional design with improved responsiveness and accessibility.
-Customizable Elements – Refined styles tailored for roleplay setups, seamlessly integrated with the original Qbox backend.
-Forward Compatibility – Polished frontend updates without disrupting existing functionalities.
-This project bridges functionality with visual excellence, setting a new standard for FiveM roleplay HUDs.
+-Revamped Fuel Gauge – Redesigned with smooth rotational alignment and real-time percentage display for better clarity.
+-Enhanced UI/UX – A minimalistic and professional design with improved responsiveness and accessibility.
+-Customizable Elements – Refined styles tailored for roleplay setups, seamlessly integrated with the original Qbox backend.
+-Forward Compatibility – Polished frontend updates without disrupting existing functionalities.
+-This project bridges functionality with visual excellence, setting a new standard for FiveM roleplay HUDs.
 
 
 
 📌 Features
 🏃‍♂️ Player HUD
-Vitals: Health, Hunger, Thirst, Armor, Stamina, Stress, Oxygen
-Audio & Communication: Voice Volume, Radio
-Other Indicators: Parachute, Money
+-Vitals: Health, Hunger, Thirst, Armor, Stamina, Stress, Oxygen
+-Audio & Communication: Voice Volume, Radio
+-Other Indicators: Parachute, Money
 🚗 Vehicle HUD
-Performance: Speed, Engine Health, Fuel, Nitro, Harness Health
-Safety: Seatbelt Status
-Navigation: Altitude Meter
+-Performance: Speed, Engine Health, Fuel, Nitro, Harness Health
+-Safety: Seatbelt Status
+-Navigation: Altitude Meter
 ⚙️ Customization
-Players can customize the HUD through an in-game settings menu.
+-Players can customize the HUD through an in-game settings menu.
 
 Default key: "I"
 Command: /menu
@@ -61,11 +61,11 @@ Real-Time Money Transactions (Cash & Bank)
 ![Screenshot 2025-02-22 065246](https://github.com/user-attachments/assets/e861aa9b-290d-43fd-98d7-8aed9d16e00f)
 
 🚧 Work in Progress (WIP)
-Draggable Components for a more personalized HUD experience.
-Switching to React (Vite.js) for improved performance and maintainability.
-Professional Altitude Meter Design.
-Additional Variants for more customization options.
-Expanding Compatibility to support other frameworks (OX, QB, ESX).
+-Draggable Components for a more personalized HUD experience.
+-Switching to React (Vite.js) for improved performance and maintainability.
+-Professional Altitude Meter Design.
+-Additional Variants for more customization options.
+-Expanding Compatibility to support other frameworks (OX, QB, ESX).
 
 📌 Requirements
-Qbox Core (qbx-core)
+-Qbox Core (qbx-core)
