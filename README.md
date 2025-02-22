@@ -61,3 +61,11 @@ Harness Enabled
 altitude meter
 ![image](https://github.com/user-attachments/assets/b163f914-8082-4516-b95f-c43a12fb0458)
 
+![image](https://github.com/user-attachments/assets/a01c3975-f569-4531-bfb3-1b287d03f421)
+
+
+WIP
+* Dragable compoents
+* switching to react (Vite Js)
+* Make altitude meter more professtional
+* add more varients
