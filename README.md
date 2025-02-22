@@ -44,4 +44,20 @@ Each player can customize the look and feel of their own HUD through a settings 
 The **default key** is **"I"**, but each player can rebind this. One can also open the settings menu using **"/menu"**
 
 ## Previews
-Soon bro
+![image](https://github.com/user-attachments/assets/019bf0b0-4464-4b51-a313-8ae1449ddc9c)
+
+![Screenshot 2025-02-22 063955](https://github.com/user-attachments/assets/8e7cf7a0-1b3e-4a0f-a508-19fb39933c9c)
+
+![Screenshot 2025-02-22 063927](https://github.com/user-attachments/assets/0f198912-1383-4dfb-aae6-3b2e7f63088e)
+
+![image](https://github.com/user-attachments/assets/635c71ff-cddc-4474-bc1b-a451ab442be9)
+
+Curse Control
+![image](https://github.com/user-attachments/assets/a788b3a4-7701-426c-befd-4abf5370de30)
+
+Harness Enabled
+![image](https://github.com/user-attachments/assets/d1e655d4-4881-4796-8f2c-7f95c7e7b4a4)
+
+altitude meter
+![image](https://github.com/user-attachments/assets/b163f914-8082-4516-b95f-c43a12fb0458)
+
