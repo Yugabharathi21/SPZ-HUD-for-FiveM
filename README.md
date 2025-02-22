@@ -39,6 +39,9 @@ Shows UI elements such as health, hunger, thirst, etc.
 - Engine Health
 - Fuel
 
+  requirements
+  qbx-core
+
 ### Settings Menu
 Each player can customize the look and feel of their own HUD through a settings menu.
 The **default key** is **"I"**, but each player can rebind this. One can also open the settings menu using **"/menu"**
@@ -69,3 +72,4 @@ WIP
 * switching to react (Vite Js)
 * Make altitude meter more professtional
 * add more varients
+* adding to other cores (ox,qb,esx)
